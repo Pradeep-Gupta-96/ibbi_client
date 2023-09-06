@@ -1,20 +1,21 @@
  
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap'); 
 body {padding: 0px;margin: 0px;box-sizing: border-box;font-family: 'Montserrat', sans-serif;}
+a {text-decoration: none;}
 .header {display: inline-block;width: 100%;}
 .bound {max-width: 1240px;margin: 0px auto;width: 100%;}
-.topsec {display: flex;justify-content: space-between;padding: 20px 0px;border-bottom: 2px solid #454545;align-items: center;}
+.topsec {display: flex;justify-content: space-between;padding: 10px 0px;border-bottom: 2px solid #20366a;align-items: baseline;}
 .menu {}
 .logo {font-weight: bold;}
+.logo img {height: 80px;}
 .menu ul {margin: 0px; padding: 0px; display: flex;}
 .menu ul li {display: flex; position: relative;}
-.menu ul li a {text-decoration: none; color: #454545;padding: 0px 20px;font-weight: 500;line-height: 30px;}
-li.nav-item.get-free a {background: #454545;color: #fff;}
+.menu ul li a {text-decoration: none; color: #20366a;padding: 0px 20px;font-weight: 500;line-height: 30px;}
+li.nav-item.get-free a {background: #20366a;color: #fff;border: 1px solid #20366a;transition: all 1s ease 0s;}
+li.nav-item.get-free a:hover {background: #fff;color: #20366a;}
 .menu ul li > ul li {width: 100%;}
 .menu ul li > ul li a {padding: 10px 0px;font-size: 14px;border-bottom: 1px solid #ccc; width: 100%;display: inline-block;}
 .menu ul li > ul li:last-child a {border-bottom: 0px;}
-.main-banner {padding: 20px 0px;}
-.main-banner img {width: 100%;}
 
 .menu ul li.parent {position: relative;display: inline-block;}
 .menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 200px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;padding: 10px 15px;}

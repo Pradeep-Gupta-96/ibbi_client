@@ -1,7 +1,8 @@
 import React from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
-import banner from './img/banner_1.png'
+import logo from './img/logo.png'
+
 const Navbar = () => {
   return (
 
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div className="header">
         <div className="bound">
           <div className="topsec">
-            <div className="logo">IBC Support</div>
+            <div className="logo"><img src={logo} alt="Logo" /></div>
             <div className="menu">
               <Link to="javascript-void()" className='toggle-menu' style={{display:"none"}}>Menu</Link>
               <ul>
@@ -33,12 +34,6 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="banner">
-        <div className="bound">
-          <div className="main-banner"><img src={banner} alt="banner" /></div>
         </div>
       </div>
      

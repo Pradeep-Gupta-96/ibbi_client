@@ -1,6 +1,6 @@
 import React from 'react'
 import './AboutUs.css'
-import { Box, Toolbar } from '@mui/material'
+import { Box } from '@mui/material'
 
 const AboutUs = () => {
     return (

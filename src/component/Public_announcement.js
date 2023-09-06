@@ -1,6 +1,6 @@
 import React from 'react'
 import './Public_announcement'
-import { Box, Toolbar } from '@mui/material'
+import { Box } from '@mui/material'
 
 const Public_announcement = () => {
   return (
