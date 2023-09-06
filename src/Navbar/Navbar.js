@@ -13,9 +13,9 @@ const Navbar = () => {
             <div className="menu">
               <Link to="javascript-void()" className='toggle-menu' style={{display:"none"}}>Menu</Link>
               <ul>
-                <li className="nav-item parent"><Link className="nav-Link" to="#">Home</Link>
+                <li className="nav-item parent"><Link className="nav-Link" to="/">Home</Link>
                   <ul>
-                    <li><Link to="#">About Us</Link></li>
+                    <li><Link to="/about" >About Us</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Services</Link>
@@ -35,21 +35,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       <div className="banner">
         <div className="bound">
           <div className="main-banner"><img src={banner} alt="banner" /></div>
         </div>
       </div>
-      <div className="dropdown">
-        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <Link className="dropdown-item" to="#">Action</Link>
-          <Link className="dropdown-item" to="#">Another action</Link>
-          <Link className="dropdown-item" to="#">Something else here</Link>
-        </div>
-      </div>
+     
     </>
   )
 }

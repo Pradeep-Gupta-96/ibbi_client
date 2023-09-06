@@ -5,8 +5,7 @@ import { Box, Toolbar } from '@mui/material'
 const AboutUs = () => {
     return (
         <>
-            <Box component="main" sx={{ p: 3 }}>
-                <Toolbar />
+            <Box >
                 about .........
             </Box>
         </>
