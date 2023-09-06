@@ -19,35 +19,8 @@
 .btn-area {text-align: right;}
 .btn-area .blue-btn { margin-left: 20px;}
 
-
-.boxse {
-    display: inline-block;
-    width: 100%;
-}
-
-.boxse ul {
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.boxse ul li{
-    width: 25%;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 140px;
-}
-
-.icon-color-b {
-    height: 70px;
-    width: 70px;
-    border-radius: 100%;
-    background: #20366a;
-    
-}
-.box-inr span{
-    color: #20366a;
-}
+.boxse {display: inline-block;width: 100%;}
+.boxse ul {padding: 0px;margin: 0px;display: flex;flex-wrap: wrap;}
+.boxse ul li{width: 25%;list-style: none;display: flex;align-items: center;justify-content: center;height: 140px;}
+.icon-color-b {height: 70px;width: 70px;border-radius: 100%;background: #20366a; }
+.box-inr span{color: #20366a;}

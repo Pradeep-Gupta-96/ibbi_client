@@ -4,6 +4,14 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import './HomePage.css'
 import banner from '../utility/banner_1.png'
+import activities from '../utility/activities-1.png'
+import career from '../utility/career-1.png'
+import downloadform from '../utility/downloadform-123.png'
+import faqs from '../utility/faqs-1.png'
+import RTI from '../utility/RTI-1.png'
+import stakeholders from '../utility/stakeholders-1.png'
+import TENDER from '../utility/tender-1.png'
+import workshop from '../utility/workshop-1.png'
 import { Link } from 'react-router-dom'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -73,8 +81,8 @@ const HomePage = () => {
                   <ul>
                     <li><div className="box-outer">
                       <Link to="/en/tender"><div className="box-inr"><div className="icon-color-b"><img src="/img/tender-1.png" alt="" /></div><span>
-                      Tender
-                    </span></div></Link></div></li>
+                        Tender
+                      </span></div></Link></div></li>
                     <li><div className="box-outer"><Link to="/en/stakeholders"><div className="box-inr"><div className="icon-color-b"><img src="/img/stakeholders-1.png" alt="" /></div> <span>Other <br />Stakeholders</span></div></Link></div></li>
                     <li><div className="box-outer"><Link target="_blank" to="/en/faqs"><div className="box-inr"><div className="icon-color-b"><img src="/img/faqs-1.png" alt="" /></div><span>FAQs</span></div></Link></div></li>
                     <li><div className="box-outer"><Link target="_blank" to="/en/home/activities"><div className="box-inr"><div className="icon-color-b"><img src="/img/activities-1.png" alt="" /></div><span>Engagement with<br /> Academia</span></div></Link></div></li>
@@ -94,12 +102,12 @@ const HomePage = () => {
 
             <Grid className='btn-sec' item xs={6} md={4}>
               <Item className='shadow-remove'>
-              <div className="button_st">
-                <Link className='blue-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
-                <Link className='blue-btn' to="#" target="_blank"><span>Corporate Processes</span></Link>
-                <Link className='blue-btn' to="#" target="_blank"><span>IP Corner</span></Link>
-                <Link className='blue-btn' to="#" target="_blank"><span>Employee Corner</span></Link>
-                  </div>
+                <div className="button_st">
+                  <Link className='blue-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
+                  <Link className='blue-btn' to="#" target="_blank"><span>Corporate Processes</span></Link>
+                  <Link className='blue-btn' to="#" target="_blank"><span>IP Corner</span></Link>
+                  <Link className='blue-btn' to="#" target="_blank"><span>Employee Corner</span></Link>
+                </div>
               </Item>
             </Grid>
           </Grid>
