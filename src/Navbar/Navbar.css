@@ -1,19 +1,32 @@
-  
-body {padding: 0px;margin: 0px;}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap'); 
+body {padding: 0px;margin: 0px;box-sizing: border-box;font-family: 'Montserrat', sans-serif;}
 .header {display: inline-block;width: 100%;}
-.bound {max-width: 1200px;margin: 0px auto;}
-.topsec {display: flex;justify-content: space-between;padding: 20px 0px;border-bottom: 2px solid #454545;}
+.bound {max-width: 1240px;margin: 0px auto;width: 100%;}
+.topsec {display: flex;justify-content: space-between;padding: 20px 0px;border-bottom: 2px solid #454545;align-items: center;}
 .menu {}
 .logo {font-weight: bold;}
 .menu ul {margin: 0px; padding: 0px; display: flex;}
 .menu ul li {display: flex; position: relative;}
-.menu ul li a {text-decoration: none; color: #454545;padding: 0px 20px;}
-.menu ul li:last-child a {padding-right: 0px;} 
+.menu ul li a {text-decoration: none; color: #454545;padding: 0px 20px;font-weight: 500;line-height: 30px;}
+li.nav-item.get-free a {background: #454545;color: #fff;}
 .menu ul li > ul li {width: 100%;}
-.menu ul li > ul li a {padding: 10px 20px;}
+.menu ul li > ul li a {padding: 10px 0px;font-size: 14px;border-bottom: 1px solid #ccc; width: 100%;display: inline-block;}
+.menu ul li > ul li:last-child a {border-bottom: 0px;}
 .main-banner {padding: 20px 0px;}
 .main-banner img {width: 100%;}
 
 .menu ul li.parent {position: relative;display: inline-block;}
-.menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 200px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+.menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 200px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;padding: 10px 15px;}
 .menu ul li.parent:hover ul {display: block;}
+
+@media (max-width: 767px) {
+    .bound {padding: 0px 15px;box-sizing: border-box;}
+    .menu {position: relative;display: inline-block;}
+    .menu > .toggle-menu {display: block !important;}
+    .menu > ul{display: none;position: absolute;background-color: #f1f1f1;min-width: 200px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1; right: 0px;padding: 15px 10px;}
+    .menu > .toggle-menu:hover + ul{display: block;}
+    .menu ul li {width: 100%;padding: 5px 10px;display: inline-block;}
+    .menu ul li a {display: inline-block;width: 100%;}
+    .menu ul li > ul li a {padding: 0px 20px;}
+}
