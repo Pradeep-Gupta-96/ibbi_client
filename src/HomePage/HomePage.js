@@ -94,7 +94,7 @@ const HomePage = () => {
 
             <Grid className='btn-sec' item xs={6} md={4}>
               <Item className='shadow-remove'>
-              <div class="button_st">
+              <div className="button_st">
                 <Link className='blue-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
                 <Link className='blue-btn' to="#" target="_blank"><span>Corporate Processes</span></Link>
                 <Link className='blue-btn' to="#" target="_blank"><span>IP Corner</span></Link>
