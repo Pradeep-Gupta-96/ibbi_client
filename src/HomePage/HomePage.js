@@ -80,19 +80,19 @@ const HomePage = () => {
                 <div className="boxse">
                   <ul>
                     <li><div className="box-outer">
-                      <Link to="/en/tender"><div className="box-inr"><div className="icon-color-b"><img src="/img/tender-1.png" alt="" /></div><span>
+                      <Link to="/en/tender"><div className="box-inr"><div className="icon-color-b"><img src={workshop} alt="banner" /></div><span>
                         Tender
                       </span></div></Link></div></li>
-                    <li><div className="box-outer"><Link to="/en/stakeholders"><div className="box-inr"><div className="icon-color-b"><img src="/img/stakeholders-1.png" alt="" /></div> <span>Other <br />Stakeholders</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link target="_blank" to="/en/faqs"><div className="box-inr"><div className="icon-color-b"><img src="/img/faqs-1.png" alt="" /></div><span>FAQs</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link target="_blank" to="/en/home/activities"><div className="box-inr"><div className="icon-color-b"><img src="/img/activities-1.png" alt="" /></div><span>Engagement with<br /> Academia</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/stakeholders"><div className="box-inr"><div className="icon-color-b"> <img src={activities} alt="banner" /></div> <span>Other <br />Stakeholders</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/faqs"><div className="box-inr"><div className="icon-color-b"><img src={career} alt="banner" /></div><span>FAQs</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/home/activities"><div className="box-inr"><div className="icon-color-b"><img src={downloadform} alt="banner" /></div><span>Engagement with<br /> Academia</span></div></Link></div></li>
 
-                    <li><div className="box-outer"><Link target="_blank" to="/en/home/career"><div className="box-inr"><div className="icon-color-b"><img src="/img/career-1.png" alt="" /></div><span>Career</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link target="_blank" to="/en/home/rti"><div className="box-inr"><div className="icon-color-b"><img src="/img/RTI-1.png" alt="" /></div><span>Right to Information</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link to="/en/home/downloads"><div className="box-inr"><div className="icon-color-b"><img src="/img/downloadform-123.png" alt="" /></div><span>Downloads</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/home/career"><div className="box-inr"><div className="icon-color-b"><img src={faqs} alt="banner" /></div><span>Career</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/home/rti"><div className="box-inr"><div className="icon-color-b"><img src={RTI} alt="banner" /></div><span>Right to Information</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/home/downloads"><div className="box-inr"><div className="icon-color-b"><img src={stakeholders} alt="banner" /></div><span>Downloads</span></div></Link></div></li>
 
 
-                    <li><div className="box-outer"><Link to="/en/workshop"><div className="box-inr"><div className="icon-color-b"><img src="/img/workshop-1.png" alt="" /></div><span>IP Workshop</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/workshop"><div className="box-inr"><div className="icon-color-b"><img src={TENDER} alt="banner" /></div><span>IP Workshop</span></div></Link></div></li>
                   </ul>
                 </div>
 
