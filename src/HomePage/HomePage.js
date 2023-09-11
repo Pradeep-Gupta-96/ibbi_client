@@ -12,6 +12,7 @@ import RTI from '../utility/RTI-1.png'
 import stakeholders from '../utility/stakeholders-1.png'
 import TENDER from '../utility/tender-1.png'
 import workshop from '../utility/workshop-1.png'
+import aboutimg from '../utility/about-img.jpeg'
 import { Link } from 'react-router-dom'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -68,8 +69,8 @@ const HomePage = () => {
             <Grid className='btn-sec' item xs={6} md={6}>
               <Item className='shadow-remove'>
                 <div className="btn-area">
-                  <Link className='quick-link-btn blue-btn' target="_blank" to="#">Grievances / Complaints Login </Link>
-                  <Link className='quick-link-btn blue-btn' target="_blank" to="#"> IP/RV Login   </Link>
+                  <Link className='quick-link-btn green-btn' target="_blank" to="#">Grievances / Complaints Login </Link>
+                  <Link className='quick-link-btn green-btn' target="_blank" to="#"> IP/RV Login   </Link>
                 </div>
               </Item>
             </Grid>
@@ -103,14 +104,34 @@ const HomePage = () => {
             <Grid className='btn-sec' item xs={6} md={4}>
               <Item className='shadow-remove'>
                 <div className="button_st">
-                  <Link className='blue-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
-                  <Link className='blue-btn' to="#" target="_blank"><span>Corporate Processes</span></Link>
-                  <Link className='blue-btn' to="#" target="_blank"><span>IP Corner</span></Link>
-                  <Link className='blue-btn' to="#" target="_blank"><span>Employee Corner</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Corporate Processes</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>IP Corner</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Employee Corner</span></Link>
                 </div>
               </Item>
             </Grid>
           </Grid>
+        </div>
+      </div>
+      <div className='about-sec'>
+        <div className="bound">
+          <Grid className="about" container spacing={2}>
+              <Grid item xs={6} md={6}>
+                <Item className='shadow-remove'>
+                  <div className='about-img'><img src={aboutimg} alt="banner" /></div>
+                </Item>
+              </Grid>
+              <Grid className='about-text' item xs={6} md={6}>
+                <Item className='shadow-remove'>
+                    <div className='text-box'>
+                      <h3>Welcome to IBC Support</h3>
+                      <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                      <div className='more-text'><Link to="#">Read More </Link></div>
+                    </div>
+                </Item>
+              </Grid>
+            </Grid>
         </div>
       </div>
     </>

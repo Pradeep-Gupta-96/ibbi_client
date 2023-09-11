@@ -10,17 +10,31 @@
 .banner-left .new-sec ul li a {text-decoration: none;color: #20366a;}
 .subscribe-btn {display: inline-block;width: 100%;}
 .subscribe-btn a {display: inline-block;width: 100%;}
-.subscribe-btn a,.blue-btn {background: #20366a;color: #fff;border: 1px solid #20366a;transition: all 1s ease 0s;padding: 10px 15px;display: inline-block;width: auto;}
+.subscribe-btn a,.blue-btn,.green-btn {background: #20366a;color: #fff;border: 1px solid #20366a;transition: all 1s ease 0s;padding: 10px 15px;display: inline-block;width: auto;}
 .subscribe-btn a:hover,.blue-btn:hover {background: #fff;color: #20366a;}
+.green-btn {border-color: #528fcb; background: #528fcb; margin-left: 20px;}
+.green-btn:hover {color: #528fcb; background: #fff;}
 
 .quick-link {display: inline-block;width: 100%;padding: 50px 0px;}
 .shadow-remove {box-shadow: none !important;}
 .comman-title {text-align: left;color: #20366a;margin: 0px;font-size: 24px;line-height: 40px;}
+.quick-link .comman-title {color: #528fcb;}
 .btn-area {text-align: right;}
 .btn-area .blue-btn { margin-left: 20px;}
-
 .boxse {display: inline-block;width: 100%;}
 .boxse ul {padding: 0px;margin: 0px;display: flex;flex-wrap: wrap;}
-.boxse ul li{width: 25%;list-style: none;display: flex;align-items: center;justify-content: center;height: 140px;}
-.icon-color-b {height: 70px;width: 70px;border-radius: 100%;background: #20366a; }
-.box-inr span{color: #20366a;}
+.boxse ul li {width: 25%;float: left;position: relative;list-style: none;}
+.box-outer {display: table;width: 100%;height: 140px;transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;padding: 10px 0px;box-sizing: border-box;border-bottom: 1px solid #ccc;}
+.box-outer a{display: table; width: 100%;height: 140px;transition: all 0.6s ease-in-out;-webkit-transition: all 0.6s ease-in-out; text-transform: uppercase;color: #000000; border-right: 1px solid #ccc;}
+.boxse ul li:nth-child(4n+0) a {border-right: 0px;}
+.boxse ul li:nth-child(5) .box-outer,.boxse ul li:nth-child(6) .box-outer
+,.boxse ul li:nth-child(7) .box-outer,.boxse ul li:nth-child(8) .box-outer {border-bottom: 0px;}
+.icon-color-b {border-radius: 100%;background: #528fcb;width: 70px;height: 70px;margin: 0 auto;line-height: 70px;}
+.box-outer a img {width: 70px;height: 70px;padding: 10px;border-radius: 100%;box-sizing: border-box;}
+.box-outer a .box-inr { display: table-cell; vertical-align: middle; text-align: center;}
+.section-box ul li span {display: table;margin: 0 auto;transition: all 0.6s ease-in-out;-webkit-transition: all 0.6s ease-in-out;position: relative;font-size: 12px;
+    font-weight: 600;margin-top: 10px;}
+.box-outer a:hover, .box-outer a:focus {background: #20366a;text-decoration: none;color: #fff;}
+.button_st a.green-btn {display: inline-block;width: 100%;margin: 30px 0px 0px;font-weight: 600;text-align: left;line-height: 30px;}
+
