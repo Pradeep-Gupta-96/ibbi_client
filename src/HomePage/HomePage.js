@@ -2,6 +2,9 @@ import React from 'react'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import './HomePage.css'
 import banner from '../utility/banner_1.png'
 import activities from '../utility/activities-1.png'
@@ -118,17 +121,142 @@ const HomePage = () => {
         <div className="bound">
           <Grid className="about" container spacing={2}>
               <Grid item xs={6} md={6}>
-                <Item className='shadow-remove'>
-                  <div className='about-img'><img src={aboutimg} alt="banner" /></div>
+                <Item className='shadow-remove about-img'>
+                  <div className='ab-img'><img src={aboutimg} alt="banner" /></div>
                 </Item>
               </Grid>
               <Grid className='about-text' item xs={6} md={6}>
                 <Item className='shadow-remove'>
                     <div className='text-box'>
                       <h3>Welcome to IBC Support</h3>
-                      <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                      <div className='more-text'><Link to="#">Read More </Link></div>
+                      <p className='ab-text'>IBC Support Forum, established in 2016, stands as a stalwart in the Indian financial landscape, offering a comprehensive suite of legal services to financial creditors, operational creditors, and resolution applicants. With an unwavering commitment to facilitating smooth insolvency and bankruptcy proceedings, IBC Support Forum has earned its reputation as a trusted partner in the Indian Corporate / Banking sector.</p>
+                      <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
                     </div>
+                </Item>
+              </Grid>
+            </Grid>
+        </div>
+      </div>
+      <div className='services-sec padding-50'>
+        <div className="bound">
+          <h3 className="comman-title mb-30">Services</h3>
+          <Grid className="services-items" container spacing={2}>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item'>
+                  <h3>For Financial Creditor</h3>
+                  <p className='ab-text'>Empower Financial Creditors to protect the interests and maximize recovery in the complex landscape of the Insolvency and Bankruptcy Code (IBC).</p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </Item>
+              </Grid>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item'>
+                  <h3>For Operational Creditor</h3>
+                  <p className='ab-text'>Empower Operational Creditors to safeguard your interests and optimize your recovery within the complexities of the Insolvency and Bankruptcy Code (IBC).</p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </Item>
+              </Grid>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item'>
+                  <h3>For Resolution Applicant</h3>
+                  <p className='ab-text'>Empower Resolution Applicants to navigate the complexities of the Insolvency and Bankruptcy Code (IBC). </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </Item>
+              </Grid>
+            </Grid>
+        </div>
+      </div>
+      <div className='highlights-sec blue-bg padding-50'>
+        <div className="bound">
+          <div className="title-sec mb-30">
+            <h3 className="comman-title">Highlights</h3>
+            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon/></Link><Link to="#"><KeyboardArrowRightIcon/></Link></div>
+          </div>
+          <Grid className="services-items" container spacing={2}>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                  <div className="content-box">
+                    <h3>Highlights 1</h3>
+                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                  </div>
+                </Item>
+              </Grid>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                  <div className="content-box">
+                    <h3>Highlights 2</h3>
+                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                  </div>
+                </Item>
+              </Grid>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                  <div className="content-box">
+                    <h3>Highlights 3</h3>
+                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                  </div>
+                </Item>
+              </Grid>
+            </Grid>
+        </div>
+      </div>
+      <div className='testmonial-sec padding-50'>
+        <div className="bound">
+          <h3 className="comman-title mb-30">Testimonials</h3>
+          <Grid className="tm-items" container spacing={2}>
+              <Grid item xs={12} md={12}>
+                <Item className='tme-item'>
+                  
+                  <div className="content-box">
+                    <div className="quate-icon"><FormatQuoteIcon  fontSize='large' /></div>
+                    <p className='tm-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className="authar-name"><strong>Cient Name</strong><br />Designation</div>
+                  </div>
+                </Item>
+              </Grid>
+            </Grid>
+        </div>
+      </div>
+      <div className='blog-sec highlights-sec blue-bg padding-50'>
+        <div className="bound">
+          <div className="title-sec mb-30">
+            <h3 className="comman-title">Blog Post</h3>
+            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon/></Link><Link to="#"><KeyboardArrowRightIcon/></Link></div>
+          </div>
+          <Grid className="services-items" container spacing={2}>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                  <div className="content-box">
+                    <h3>Post 1</h3>
+                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                  </div>
+                </Item>
+              </Grid>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                  <div className="content-box">
+                    <h3>Post 2</h3>
+                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                  </div>
+                </Item>
+              </Grid>
+              <Grid item xs={4} md={4}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                  <div className="content-box">
+                    <h3>Post 3</h3>
+                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                  </div>
                 </Item>
               </Grid>
             </Grid>
