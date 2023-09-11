@@ -262,6 +262,34 @@ const HomePage = () => {
             </Grid>
         </div>
       </div>
+      <div className='footer padding-50'>
+        <div className="bound">
+          <Grid className="contact-infos" container spacing={2}>
+              <Grid item xs={6} md={6}>
+                <Item className='info-box shadow-remove'>
+                  <div className="cont-info"><strong>CALL US 24/7: </strong>0987654321</div>
+                  
+                </Item>
+              </Grid>
+              <Grid item xs={6} md={6}>
+                <Item className='info-box shadow-remove'>
+                  <div className="cont-info"><strong>EMAIL ADDRESS: </strong>info@ibcsupport.com</div>
+                </Item>
+              </Grid>
+            </Grid>
+        </div>
+      </div>
+      <div className='copyright'>
+        <div className="bound">
+          <Grid className="copyright-content" container spacing={2}>
+              <Grid className='pt-0' item xs={12} md={12}>
+                <Item className='shadow-remove remove-bg'>
+                  <p>© 2023 IBC Support, All Rights Reserved</p>
+                </Item>
+              </Grid>
+            </Grid>
+        </div>
+      </div>
     </>
   )
 }
