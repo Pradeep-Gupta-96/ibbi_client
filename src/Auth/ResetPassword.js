@@ -25,12 +25,28 @@ font-family: 'Montserrat', sans-serif;
 
 function ResetPassword() {
   const [visivility, setVisivility] = React.useState(false)
+  const [visivility1, setVisivility1] = React.useState(false)
+  const [visivility2, setVisivility2] = React.useState(false)
 
   const changeicons = () => {
     if (visivility === false) {
       setVisivility(true)
     } else {
       setVisivility(false)
+    }
+  }
+  const changeicons1 = () => {
+    if (visivility1 === false) {
+      setVisivility1(true)
+    } else {
+      setVisivility1(false)
+    }
+  }
+  const changeicons2 = () => {
+    if (visivility2 === false) {
+      setVisivility2(true)
+    } else {
+      setVisivility2(false)
     }
   }
 
@@ -78,11 +94,47 @@ function ResetPassword() {
               id="password"
               autoComplete="current-password"
             />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="Npassword"
+              label="New Password"
+              type={visivility1 ? "text" : "password"}
+              InputProps={{
+                endAdornment:
+                  <InputAdornment position='end'>
+                    <IconButton onClick={changeicons1}>
+                      {visivility1 ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                    </IconButton>
+                  </InputAdornment>
+              }}
+              id="Npassword"
+              autoComplete="current-password"
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="Cpassword"
+              label="Conform Password"
+              type={visivility2 ? "text" : "password"}
+              InputProps={{
+                endAdornment:
+                  <InputAdornment position='end'>
+                    <IconButton onClick={changeicons2}>
+                      {visivility2 ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                    </IconButton>
+                  </InputAdornment>
+              }}
+              id="Cpassword"
+              autoComplete="current-password"
+            />
             <Button className='submit-btn'
               type="submit"
               variant="contained"
             >
-              Forgot Password
+              Update
             </Button>
             <Divider />
             <Divider />

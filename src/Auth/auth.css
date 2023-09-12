@@ -15,7 +15,7 @@
     color: #fff;
     border: 1px solid #20366a;
     transition: all 1s ease 0s;
-    border-radius: 0px;font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;font-family: 'Montserrat', sans-serif;
 }
 .auth-form .submit-btn:hover {background: #fff;color: #20366a;}
 .auth-form input {font-family: 'Montserrat', sans-serif;}
