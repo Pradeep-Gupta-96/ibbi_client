@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+.links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.links a{color: #20366a;font-family: 'Montserrat', sans-serif;text-decoration: underline;}
+.auth-form .submit-btn {
+    margin: 15px 0px !important;
+    width: 100%;
+    padding: 10px !important;
+    background: #20366a;
+    color: #fff;
+    border: 1px solid #20366a;
+    transition: all 1s ease 0s;
+    border-radius: 0px;font-family: 'Montserrat', sans-serif;
+}
+.auth-form .submit-btn:hover {background: #fff;color: #20366a;}
+.auth-form input {font-family: 'Montserrat', sans-serif;}
