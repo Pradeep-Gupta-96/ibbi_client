@@ -33,7 +33,7 @@ const HomePage = () => {
       <div className="banner">
         <div className="bound">
           <Grid className="main-banner" container spacing={2}>
-            <Grid className='banner-left' item xs={6} md={6}>
+            <Grid className='banner-left' item xs={12} md={6}>
               <Item>
                 <div className='new-sec'>
                   <h2>Whats New </h2>
@@ -50,7 +50,7 @@ const HomePage = () => {
               </Item>
             </Grid>
 
-            <Grid className='banner-right' item xs={6} md={6}>
+            <Grid className='banner-right' item xs={12} md={6}>
               <Item>
                 <img src={banner} alt="banner" />
               </Item>
@@ -63,13 +63,13 @@ const HomePage = () => {
       <div className="quick-link">
         <div className="bound">
           <Grid className="title-sec" container spacing={2}>
-            <Grid item xs={6} md={6}>
+            <Grid item xs={12} md={6}>
               <Item className='shadow-remove'>
                 <h3 className='comman-title'>QUICK LINKS</h3>
               </Item>
             </Grid>
 
-            <Grid className='btn-sec' item xs={6} md={6}>
+            <Grid className='btn-sec' item xs={12} md={6}>
               <Item className='shadow-remove'>
                 <div className="btn-area">
                   <Link className='quick-link-btn green-btn' target="_blank" to="#">Grievances / Complaints Login </Link>
@@ -79,7 +79,7 @@ const HomePage = () => {
             </Grid>
           </Grid>
           <Grid className="link-sec" container spacing={2}>
-            <Grid item xs={6} md={8}>
+            <Grid item xs={12} md={8}>
               <Item className='shadow-remove section-box'>
                 <div className="boxse">
                   <ul>
@@ -104,7 +104,7 @@ const HomePage = () => {
               </Item>
             </Grid>
 
-            <Grid className='btn-sec' item xs={6} md={4}>
+            <Grid className='btn-sec' item xs={12} md={4}>
               <Item className='shadow-remove'>
                 <div className="button_st">
                   <Link className='green-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
@@ -120,12 +120,12 @@ const HomePage = () => {
       <div className='about-sec'>
         <div className="bound">
           <Grid className="about" container spacing={2}>
-              <Grid item xs={6} md={6}>
+              <Grid item xs={12} md={6}>
                 <Item className='shadow-remove about-img'>
                   <div className='ab-img'><img src={aboutimg} alt="banner" /></div>
                 </Item>
               </Grid>
-              <Grid className='about-text' item xs={6} md={6}>
+              <Grid className='about-text' item xs={12} md={6}>
                 <Item className='shadow-remove'>
                     <div className='text-box'>
                       <h3>Welcome to IBC Support</h3>
@@ -141,21 +141,21 @@ const HomePage = () => {
         <div className="bound">
           <h3 className="comman-title mb-30">Services</h3>
           <Grid className="services-items" container spacing={2}>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4} sm={4}>
                 <Item className='service-item'>
                   <h3>For Financial Creditor</h3>
                   <p className='ab-text'>Empower Financial Creditors to protect the interests and maximize recovery in the complex landscape of the Insolvency and Bankruptcy Code (IBC).</p>
                   <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
                 </Item>
               </Grid>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4} sm={4}>
                 <Item className='service-item'>
                   <h3>For Operational Creditor</h3>
                   <p className='ab-text'>Empower Operational Creditors to safeguard your interests and optimize your recovery within the complexities of the Insolvency and Bankruptcy Code (IBC).</p>
                   <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
                 </Item>
               </Grid>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4} sm={4}>
                 <Item className='service-item'>
                   <h3>For Resolution Applicant</h3>
                   <p className='ab-text'>Empower Resolution Applicants to navigate the complexities of the Insolvency and Bankruptcy Code (IBC). </p>
@@ -172,7 +172,7 @@ const HomePage = () => {
             <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon/></Link><Link to="#"><KeyboardArrowRightIcon/></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img"><img src={aboutimg} alt="banner" /></div>
                   <div className="content-box">
@@ -182,7 +182,7 @@ const HomePage = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img"><img src={aboutimg} alt="banner" /></div>
                   <div className="content-box">
@@ -192,7 +192,7 @@ const HomePage = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img"><img src={aboutimg} alt="banner" /></div>
                   <div className="content-box">
@@ -214,8 +214,8 @@ const HomePage = () => {
                   
                   <div className="content-box">
                     <div className="quate-icon"><FormatQuoteIcon  fontSize='large' /></div>
-                    <p className='tm-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className="authar-name"><strong>Cient Name</strong><br />Designation</div>
+                    <p className='tm-text'><i>IBC Support Forum's professionalism and commitment to our success were remarkable. They provided clear and effective solutions that helped us recover debts we thought were lost forever. We're extremely grateful for their support.</i></p>
+                    <div className="authar-name"><strong>Jay Patel</strong><br />Designation</div>
                   </div>
                 </Item>
               </Grid>
@@ -229,7 +229,7 @@ const HomePage = () => {
             <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon/></Link><Link to="#"><KeyboardArrowRightIcon/></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img"><img src={aboutimg} alt="banner" /></div>
                   <div className="content-box">
@@ -239,7 +239,7 @@ const HomePage = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img"><img src={aboutimg} alt="banner" /></div>
                   <div className="content-box">
@@ -249,7 +249,7 @@ const HomePage = () => {
                   </div>
                 </Item>
               </Grid>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={12} md={4}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img"><img src={aboutimg} alt="banner" /></div>
                   <div className="content-box">
@@ -257,34 +257,6 @@ const HomePage = () => {
                     <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
                     <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
                   </div>
-                </Item>
-              </Grid>
-            </Grid>
-        </div>
-      </div>
-      <div className='footer padding-50'>
-        <div className="bound">
-          <Grid className="contact-infos" container spacing={2}>
-              <Grid item xs={6} md={6}>
-                <Item className='info-box shadow-remove'>
-                  <div className="cont-info"><strong>CALL US 24/7: </strong>0987654321</div>
-                  
-                </Item>
-              </Grid>
-              <Grid item xs={6} md={6}>
-                <Item className='info-box shadow-remove'>
-                  <div className="cont-info"><strong>EMAIL ADDRESS: </strong>info@ibcsupport.com</div>
-                </Item>
-              </Grid>
-            </Grid>
-        </div>
-      </div>
-      <div className='copyright'>
-        <div className="bound">
-          <Grid className="copyright-content" container spacing={2}>
-              <Grid className='pt-0' item xs={12} md={12}>
-                <Item className='shadow-remove remove-bg'>
-                  <p>© 2023 IBC Support, All Rights Reserved</p>
                 </Item>
               </Grid>
             </Grid>

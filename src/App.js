@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PublicAnnouncement from "./component/Public_announcement";
 import AboutUs from "./component/AboutUs";
 import HomePage from "./HomePage/HomePage";
+import Footer from "./footer/Footer";
+import Signup from "./Auth/Signup";
+import Signin from "./Auth/Signin";
+import ResetPassword from "./Auth/ResetPassword";
 
 
 
@@ -23,6 +27,21 @@ function App() {
         <Routes>
           <Route  path="/about" element={<AboutUs   />} />
         </Routes>
+
+        <Routes>
+          <Route  path="/signup" element={<Signup   />} />
+        </Routes>
+
+        <Routes>
+          <Route  path="/signin" element={<Signin   />} />
+        </Routes>
+
+        <Routes>
+          <Route  path="/resetpassword" element={<ResetPassword   />} />
+        </Routes>
+        
+        
+        <Footer/>
 
       </Router>
     </>
