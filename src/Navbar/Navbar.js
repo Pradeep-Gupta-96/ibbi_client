@@ -27,14 +27,14 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="#">Orders</Link></li>
-                <li className="nav-item parent"><Link className="nav-Link" to="/announcement">Announcements</Link>
+                <li className="nav-item parent"><Link className="nav-Link" to="#">Announcements</Link>
                   <ul>
-                    <li><Link to="#">Public Announcement</Link></li>
-                    <li><Link to="#">Claims</Link></li>
-                    <li><Link to="#">Invitation of Resolution Plan</Link></li>
-                    <li><Link to="#">Auction Notices</Link></li>
-                    <li><Link to="#">Orders</Link></li>
-                    <li><Link to="#">Summary of Outcome</Link></li>
+                    <li><Link to="/announcement">Public Announcement</Link></li>
+                    <li><Link to="/Claims">Claims</Link></li>
+                    <li><Link to="/Invitation">Invitation of Resolution Plan</Link></li>
+                    <li><Link to="/Auction">Auction Notices</Link></li>
+                    <li><Link to="/Orders">Orders</Link></li>
+                    <li><Link to="/Summary">Summary of Outcome</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="#">Blog</Link></li>
