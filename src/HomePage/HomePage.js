@@ -28,6 +28,27 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const HomePage = () => {
+
+  const [Result, setResults] = React.useState([]);
+
+  const API1 = `http://43.205.145.16:4000/api/whats_new`
+
+  const fetchData1 = async () => {
+    try {
+      const response = await fetch(`${API1}`)
+
+      const result = await response.json()
+      setResults(result)
+    } catch (error) {
+      console.log(error)
+    }
+  } 
+
+  React.useEffect(() => {
+    fetchData1();
+  }, []);
+
+  
   return (
     <>
       <div className="banner">
@@ -38,10 +59,9 @@ const HomePage = () => {
                 <div className='new-sec'>
                   <h2>Whats New </h2>
                   <ul className='latest-new'>
-                    <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to="/uploads/order/c54184ce50b7d69668ec3879167b7b25.pdf"><b>05 Sep, 2023</b>&nbsp;&nbsp;In the matter of Mr. Vishal Pawankumar Bidawatjika, IP</Link></li>
-                    <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to="/uploads/order/c54184ce50b7d69668ec3879167b7b25.pdf"><b>05 Sep, 2023</b>&nbsp;&nbsp;In the matter of Mr. Vishal Pawankumar Bidawatjika, IP</Link></li>
-                    <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to="/uploads/order/c54184ce50b7d69668ec3879167b7b25.pdf"><b>05 Sep, 2023</b>&nbsp;&nbsp;In the matter of Mr. Vishal Pawankumar Bidawatjika, IP</Link></li>
-                    <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to="/uploads/order/c54184ce50b7d69668ec3879167b7b25.pdf"><b>05 Sep, 2023</b>&nbsp;&nbsp;In the matter of Mr. Vishal Pawankumar Bidawatjika, IP</Link></li>
+                    {Result.map((item, index) => {
+                     return <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to={item.pdfLink}><b>{item.date}</b>&nbsp;&nbsp;{item.text}</Link></li>
+                    })}
                   </ul>
                   <div className='subscribe-btn'>
                     <Link to="#">Subscribe</Link>
@@ -120,146 +140,146 @@ const HomePage = () => {
       <div className='about-sec'>
         <div className="bound">
           <Grid className="about" container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <Item className='shadow-remove about-img'>
-                  <div className='ab-img'><img src={aboutimg} alt="banner" /></div>
-                </Item>
-              </Grid>
-              <Grid className='about-text' item xs={12} md={6}>
-                <Item className='shadow-remove'>
-                    <div className='text-box'>
-                      <h3>Welcome to IBC Support</h3>
-                      <p className='ab-text'>IBC Support Forum, established in 2016, stands as a stalwart in the Indian financial landscape, offering a comprehensive suite of legal services to financial creditors, operational creditors, and resolution applicants. With an unwavering commitment to facilitating smooth insolvency and bankruptcy proceedings, IBC Support Forum has earned its reputation as a trusted partner in the Indian Corporate / Banking sector.</p>
-                      <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                    </div>
-                </Item>
-              </Grid>
+            <Grid item xs={12} md={6}>
+              <Item className='shadow-remove about-img'>
+                <div className='ab-img'><img src={aboutimg} alt="banner" /></div>
+              </Item>
             </Grid>
+            <Grid className='about-text' item xs={12} md={6}>
+              <Item className='shadow-remove'>
+                <div className='text-box'>
+                  <h3>Welcome to IBC Support</h3>
+                  <p className='ab-text'>IBC Support Forum, established in 2016, stands as a stalwart in the Indian financial landscape, offering a comprehensive suite of legal services to financial creditors, operational creditors, and resolution applicants. With an unwavering commitment to facilitating smooth insolvency and bankruptcy proceedings, IBC Support Forum has earned its reputation as a trusted partner in the Indian Corporate / Banking sector.</p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
+            </Grid>
+          </Grid>
         </div>
       </div>
       <div className='services-sec padding-50'>
         <div className="bound">
           <h3 className="comman-title mb-30">Services</h3>
           <Grid className="services-items" container spacing={2}>
-              <Grid item xs={12} md={4} sm={4}>
-                <Item className='service-item'>
-                  <h3>For Financial Creditor</h3>
-                  <p className='ab-text'>Empower Financial Creditors to protect the interests and maximize recovery in the complex landscape of the Insolvency and Bankruptcy Code (IBC).</p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </Item>
-              </Grid>
-              <Grid item xs={12} md={4} sm={4}>
-                <Item className='service-item'>
-                  <h3>For Operational Creditor</h3>
-                  <p className='ab-text'>Empower Operational Creditors to safeguard your interests and optimize your recovery within the complexities of the Insolvency and Bankruptcy Code (IBC).</p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </Item>
-              </Grid>
-              <Grid item xs={12} md={4} sm={4}>
-                <Item className='service-item'>
-                  <h3>For Resolution Applicant</h3>
-                  <p className='ab-text'>Empower Resolution Applicants to navigate the complexities of the Insolvency and Bankruptcy Code (IBC). </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </Item>
-              </Grid>
+            <Grid item xs={12} md={4} sm={4}>
+              <Item className='service-item'>
+                <h3>For Financial Creditor</h3>
+                <p className='ab-text'>Empower Financial Creditors to protect the interests and maximize recovery in the complex landscape of the Insolvency and Bankruptcy Code (IBC).</p>
+                <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+              </Item>
             </Grid>
+            <Grid item xs={12} md={4} sm={4}>
+              <Item className='service-item'>
+                <h3>For Operational Creditor</h3>
+                <p className='ab-text'>Empower Operational Creditors to safeguard your interests and optimize your recovery within the complexities of the Insolvency and Bankruptcy Code (IBC).</p>
+                <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+              </Item>
+            </Grid>
+            <Grid item xs={12} md={4} sm={4}>
+              <Item className='service-item'>
+                <h3>For Resolution Applicant</h3>
+                <p className='ab-text'>Empower Resolution Applicants to navigate the complexities of the Insolvency and Bankruptcy Code (IBC). </p>
+                <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+              </Item>
+            </Grid>
+          </Grid>
         </div>
       </div>
       <div className='highlights-sec blue-bg padding-50'>
         <div className="bound">
           <div className="title-sec mb-30">
             <h3 className="comman-title">Highlights</h3>
-            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon/></Link><Link to="#"><KeyboardArrowRightIcon/></Link></div>
+            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon /></Link><Link to="#"><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-              <Grid item xs={12} md={4}>
-                <Item className='service-item shadow-remove'>
-                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                  <div className="content-box">
-                    <h3>Highlights 1</h3>
-                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                  </div>
-                </Item>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Item className='service-item shadow-remove'>
-                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                  <div className="content-box">
-                    <h3>Highlights 2</h3>
-                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                  </div>
-                </Item>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Item className='service-item shadow-remove'>
-                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                  <div className="content-box">
-                    <h3>Highlights 3</h3>
-                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                  </div>
-                </Item>
-              </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='service-item shadow-remove'>
+                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                <div className="content-box">
+                  <h3>Highlights 1</h3>
+                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
             </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='service-item shadow-remove'>
+                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                <div className="content-box">
+                  <h3>Highlights 2</h3>
+                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='service-item shadow-remove'>
+                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                <div className="content-box">
+                  <h3>Highlights 3</h3>
+                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
+            </Grid>
+          </Grid>
         </div>
       </div>
       <div className='testmonial-sec padding-50'>
         <div className="bound">
           <h3 className="comman-title mb-30">Testimonials</h3>
           <Grid className="tm-items" container spacing={2}>
-              <Grid item xs={12} md={12}>
-                <Item className='tme-item'>
-                  
-                  <div className="content-box">
-                    <div className="quate-icon"><FormatQuoteIcon  fontSize='large' /></div>
-                    <p className='tm-text'><i>IBC Support Forum's professionalism and commitment to our success were remarkable. They provided clear and effective solutions that helped us recover debts we thought were lost forever. We're extremely grateful for their support.</i></p>
-                    <div className="authar-name"><strong>Jay Patel</strong><br />Designation</div>
-                  </div>
-                </Item>
-              </Grid>
+            <Grid item xs={12} md={12}>
+              <Item className='tme-item'>
+
+                <div className="content-box">
+                  <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
+                  <p className='tm-text'><i>IBC Support Forum's professionalism and commitment to our success were remarkable. They provided clear and effective solutions that helped us recover debts we thought were lost forever. We're extremely grateful for their support.</i></p>
+                  <div className="authar-name"><strong>Jay Patel</strong><br />Designation</div>
+                </div>
+              </Item>
             </Grid>
+          </Grid>
         </div>
       </div>
       <div className='blog-sec highlights-sec blue-bg padding-50'>
         <div className="bound">
           <div className="title-sec mb-30">
             <h3 className="comman-title">Blog Post</h3>
-            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon/></Link><Link to="#"><KeyboardArrowRightIcon/></Link></div>
+            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon /></Link><Link to="#"><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-              <Grid item xs={12} md={4}>
-                <Item className='service-item shadow-remove'>
-                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                  <div className="content-box">
-                    <h3>Post 1</h3>
-                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                  </div>
-                </Item>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Item className='service-item shadow-remove'>
-                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                  <div className="content-box">
-                    <h3>Post 2</h3>
-                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                  </div>
-                </Item>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Item className='service-item shadow-remove'>
-                  <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                  <div className="content-box">
-                    <h3>Post 3</h3>
-                    <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                    <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                  </div>
-                </Item>
-              </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='service-item shadow-remove'>
+                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                <div className="content-box">
+                  <h3>Post 1</h3>
+                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
             </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='service-item shadow-remove'>
+                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                <div className="content-box">
+                  <h3>Post 2</h3>
+                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='service-item shadow-remove'>
+                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
+                <div className="content-box">
+                  <h3>Post 3</h3>
+                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
+                </div>
+              </Item>
+            </Grid>
+          </Grid>
         </div>
       </div>
     </>
