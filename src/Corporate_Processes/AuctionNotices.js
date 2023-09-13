@@ -16,7 +16,7 @@ const AuctionNotices = () => {
     const [page, setPage] = React.useState(0);
     const [Result, setResults] = React.useState([]);
 
-    const API1 = `http://localhost:4000/api/auction_notices`
+    const API1 = `http://43.205.145.16:4000/api/auction_notices`
 
     const fetchData1 = async (page) => {
         try {
