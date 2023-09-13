@@ -36,55 +36,66 @@ const Announcements = () => {
 
 
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell >typeOfPA</TableCell>
-                            <TableCell >dateOfAnnouncement</TableCell>
-                            <TableCell >lastDateOfSubmission</TableCell>
-                            <TableCell >corporateDebtor</TableCell>
-                            <TableCell >nameOfApplicant</TableCell>
-                            <TableCell >nameOfIP</TableCell>
-                            <TableCell >pdfLink</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {Result
-                            .map((item, index) => {
-                                return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                                        <TableCell >{item.typeOfPA}</TableCell>
-                                        <TableCell >{item.dateOfAnnouncement}</TableCell>
-                                        <TableCell >{item.lastDateOfSubmission}</TableCell>
-                                        <TableCell >{item.corporateDebtor}</TableCell>
-                                        <TableCell >{item.nameOfApplicant}</TableCell>
-                                        <TableCell >{item.nameOfIP}</TableCell>
-                                        <TableCell sx={{ cursor: 'pointer' }}>
-                                            <Link href={item.pdfLink} target="_blank" rel="noopener noreferrer">
-                                                <PictureAsPdfIcon />
-                                            </Link>
-                                        </TableCell>
+        <>
+            <div className="banner">
+                <div className="bound">
+                    <div className="page-title">PUBLIC ANNOUNCEMENT</div>
+                </div>
+            </div>
+            <div className="page-content">
+                <div className="bound">
+                    <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
+                        <TableContainer sx={{ maxHeight: 440 }}>
+                            <Table className='data-table' stickyHeader aria-label="sticky table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell >Type of PA</TableCell>
+                                        <TableCell >Date of Announcement</TableCell>
+                                        <TableCell >Last date of Submission</TableCell>
+                                        <TableCell >Name of Corporate Debtor</TableCell>
+                                        <TableCell >Name of Applicant</TableCell>
+                                        <TableCell >Name of Insolvency Professional</TableCell>
+                                        <TableCell >Public Announcement</TableCell>
                                     </TableRow>
-                                );
-                            })}
-                    </TableBody>
-                </Table>
-                <Stack spacing={2}>
+                                </TableHead>
+                                <TableBody>
+                                    {Result
+                                        .map((item, index) => {
+                                            return (
+                                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                                                    <TableCell >{item.typeOfPA}</TableCell>
+                                                    <TableCell >{item.dateOfAnnouncement}</TableCell>
+                                                    <TableCell >{item.lastDateOfSubmission}</TableCell>
+                                                    <TableCell >{item.corporateDebtor}</TableCell>
+                                                    <TableCell >{item.nameOfApplicant}</TableCell>
+                                                    <TableCell >{item.nameOfIP}</TableCell>
+                                                    <TableCell sx={{ cursor: 'pointer' }}>
+                                                        <Link href={item.pdfLink} target="_blank" rel="noopener noreferrer">
+                                                            <PictureAsPdfIcon />
+                                                        </Link>
+                                                    </TableCell>
+                                                </TableRow>
+                                            );
+                                        })}
+                                </TableBody>
+                            </Table>
+                            <Stack spacing={2}>
 
-                    <Pagination
-                        count={525}
-                        page={page}
-                        onChange={(event, value) => setPage(value)}
-                        showFirstButton
-                        showLastButton
+                                <Pagination
+                                    count={525}
+                                    page={page}
+                                    onChange={(event, value) => setPage(value)}
+                                    showFirstButton
+                                    showLastButton
 
-                    />
-                </Stack>
-            </TableContainer>
+                                />
+                            </Stack>
+                        </TableContainer>
 
-        </Paper>
+                    </Paper>
+                </div>
+            </div>
+        </>
     )
 }
 
