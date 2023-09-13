@@ -27,7 +27,11 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="#">Orders</Link></li>
+<<<<<<< HEAD
                 <li className="nav-item"><Link className="nav-Link" to="/announcement">Announcements</Link></li>
+=======
+                <li className="nav-item"><Link className="nav-Link" to="/announcements">Announcements</Link></li>
+>>>>>>> a5eb2c48ba565d193fcdc128cddb37591ce6382f
                 <li className="nav-item"><Link className="nav-Link" to="#">Blog</Link></li>
                 <li className="nav-item"><Link className="nav-Link" to="/contact-us">Contacts</Link></li>
                 <li className="nav-item get-free"><Link className="nav-Link" to="#">Get Free Consultation</Link></li>

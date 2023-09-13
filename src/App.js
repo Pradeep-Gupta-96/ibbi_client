@@ -7,7 +7,11 @@ import Footer from "./footer/Footer";
 import Signup from "./Auth/Signup";
 import Signin from "./Auth/Signin";
 import ResetPassword from "./Auth/ResetPassword";
+<<<<<<< HEAD
 import ContactUs from "./component/ContactUs";
+=======
+import Announcements from "./Corporate_Processes/Announcements";
+>>>>>>> a5eb2c48ba565d193fcdc128cddb37591ce6382f
 
 
 
@@ -43,6 +47,10 @@ function App() {
 
         <Routes>
           <Route  path="/resetpassword" element={<ResetPassword   />} />
+        </Routes>
+        
+        <Routes>
+          <Route  path="/announcements" element={<Announcements   />} />
         </Routes>
         
         
