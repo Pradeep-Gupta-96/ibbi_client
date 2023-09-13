@@ -7,6 +7,7 @@ import Footer from "./footer/Footer";
 import Signup from "./Auth/Signup";
 import Signin from "./Auth/Signin";
 import ResetPassword from "./Auth/ResetPassword";
+import Announcements from "./Corporate_Processes/Announcements";
 
 
 
@@ -38,6 +39,10 @@ function App() {
 
         <Routes>
           <Route  path="/resetpassword" element={<ResetPassword   />} />
+        </Routes>
+        
+        <Routes>
+          <Route  path="/announcements" element={<Announcements   />} />
         </Routes>
         
         
