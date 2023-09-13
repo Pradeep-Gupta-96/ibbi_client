@@ -27,9 +27,9 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="#">Orders</Link></li>
-                <li className="nav-item"><Link className="nav-Link" to="#">Announcements</Link></li>
+                <li className="nav-item"><Link className="nav-Link" to="/announcement">Announcements</Link></li>
                 <li className="nav-item"><Link className="nav-Link" to="#">Blog</Link></li>
-                <li className="nav-item"><Link className="nav-Link" to="#">Contacts</Link></li>
+                <li className="nav-item"><Link className="nav-Link" to="/contact-us">Contacts</Link></li>
                 <li className="nav-item get-free"><Link className="nav-Link" to="#">Get Free Consultation</Link></li>
               </ul>
             </div>

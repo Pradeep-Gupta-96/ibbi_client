@@ -7,6 +7,7 @@ import Footer from "./footer/Footer";
 import Signup from "./Auth/Signup";
 import Signin from "./Auth/Signin";
 import ResetPassword from "./Auth/ResetPassword";
+import ContactUs from "./component/ContactUs";
 
 
 
@@ -21,11 +22,15 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route  path="/publicannouncement" element={<PublicAnnouncement />} />
+          <Route  path="/announcement" element={<PublicAnnouncement />} />
         </Routes>
 
         <Routes>
           <Route  path="/about" element={<AboutUs   />} />
+        </Routes>
+
+        <Routes>
+          <Route  path="/contact-us" element={<ContactUs   />} />
         </Routes>
 
         <Routes>

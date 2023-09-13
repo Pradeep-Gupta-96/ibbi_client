@@ -1,13 +1,20 @@
 import React from 'react'
 import './AboutUs.css'
-import { Box } from '@mui/material'
+
 
 const AboutUs = () => {
     return (
         <>
-            <Box >
-                about .........
-            </Box>
+            <div className="banner">
+                <div className="bound">
+                    <div className="page-title">About Us</div>
+                </div>
+            </div>
+            <div className="page-content">
+                <div className="bound">
+                    <p>Content Coming Soon!!</p>
+                </div>
+            </div>
         </>
     )
 }
