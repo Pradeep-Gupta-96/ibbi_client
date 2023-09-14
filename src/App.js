@@ -22,96 +22,42 @@ import IBBI from "./Orders/IBBI";
 import IPARVO from "./Orders/IPARVO";
 import OTHERCOURTS from "./Orders/OTHERCOURTS";
 
-
+const myAllroute = [
+  { path: "/", element: <HomePage /> },
+  { path: "/about", element: <AboutUs /> },
+  { path: "/contact-us", element: <ContactUs /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/signin", element: <Signin /> },
+  { path: "/resetpassword", element: <ResetPassword /> },
+  { path: "/announcement", element: <Announcements /> },
+  { path: "/Auction", element: <AuctionNotices /> },
+  { path: "/Claims", element: <Claims /> },
+  { path: "/Invitation", element: <InvitationofResolutionPlan /> },
+  { path: "/Orders", element: <Orders /> },
+  { path: "/Summary", element: <SummaryofOutcome /> },
+  { path: "/drts", element: <DRTs /> },
+  { path: "/highcourts", element: <HIGHCOURTs /> },
+  { path: "/supremecourt", element: <SUPREMECOURT /> },
+  { path: "/nclat", element: <NCLAT /> },
+  { path: "/nclt", element: <NCLT /> },
+  { path: "/ibbi", element: <IBBI /> },
+  { path: "/iparvo", element: <IPARVO /> },
+  { path: "/othercourts", element: <OTHERCOURTS /> },
+]
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-
         <Routes>
-          <Route excet path="/" element={<HomePage />} />
+          {myAllroute.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
         </Routes>
-
-        <Routes>
-          <Route path="/about" element={<AboutUs />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/contact-us" element={<ContactUs />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/signin" element={<Signin />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/resetpassword" element={<ResetPassword />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/announcement" element={<Announcements />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/Auction" element={<AuctionNotices />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/Claims" element={<Claims />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/Invitation" element={<InvitationofResolutionPlan />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/Orders" element={<Orders />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/Summary" element={<SummaryofOutcome />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/drts" element={<DRTs />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/highcourts" element={<HIGHCOURTs />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/supremecourt" element={<SUPREMECOURT />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/nclat" element={<NCLAT />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/nclt" element={<NCLT />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/ibbi" element={<IBBI />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/iparvo" element={<IPARVO />} />
-        </Routes>
-
-        <Routes>
-          <Route path="/othercourts" element={<OTHERCOURTS />} />
-        </Routes>
-
         <Footer />
       </Router>
+
     </>
   );
 }
