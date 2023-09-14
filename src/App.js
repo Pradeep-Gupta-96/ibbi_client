@@ -13,6 +13,9 @@ import Claims from "./Corporate_Processes/Claims";
 import InvitationofResolutionPlan from "./Corporate_Processes/InvitationofResolutionPlan";
 import Orders from "./Corporate_Processes/Orders";
 import SummaryofOutcome from "./Corporate_Processes/SummaryofOutcome";
+import DRAT from "./Orders/DRAT";
+import DRTs from "./Orders/DRTs";
+import HIGHCOURTs from "./Orders/HIGHCOURTs";
 
 
 
@@ -68,6 +71,18 @@ function App() {
 
         <Routes>
           <Route path="/Summary" element={<SummaryofOutcome />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/drat" element={<DRAT />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/drts" element={<DRTs />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/highcourts" element={<HIGHCOURTs />} />
         </Routes>
 
         <Footer />

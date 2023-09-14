@@ -23,7 +23,7 @@ li.nav-item.get-free a:hover {background: #fff;color: #20366a;}
 .menu ul li > ul li:last-child a {border-bottom: 0px;}
 
 .menu ul li.parent {position: relative;display: inline-block;}
-.menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 200px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 9;padding: 10px 15px;}
+.menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 206px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 9;padding: 10px 15px;}
 .menu ul li.parent:hover ul {display: block;}
 
 /* Inner pages */
