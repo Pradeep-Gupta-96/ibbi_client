@@ -6,7 +6,9 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import './HomePage.css'
-import banner from '../utility/banner_1.png'
+import banner from '../utility/hero-img.png'
+import cercle from '../utility/cercle-shape.png'
+import whyus from '../utility/why-us.png'
 import activities from '../utility/activities-1.png'
 import career from '../utility/career-1.png'
 import downloadform from '../utility/downloadform-123.png'
@@ -71,8 +73,8 @@ const HomePage = () => {
             </Grid>
 
             <Grid className='banner-right' item xs={12} md={6}>
-              <Item>
-                <img src={banner} alt="banner" />
+              <Item className='shadow-remove'>
+                <img className='img-anim' src={banner} alt="banner" />
               </Item>
             </Grid>
 
@@ -141,12 +143,14 @@ const HomePage = () => {
         <div className="bound">
           <Grid className="about" container spacing={2}>
             <Grid item xs={12} md={6}>
-              <Item className='shadow-remove about-img'>
-                <div className='ab-img'><img src={aboutimg} alt="banner" /></div>
+              <Item className='shadow-remove remove-bg about-img'>
+                <div className='ab-img wow fadeInLeft'>
+                  <img className='cercle-img' src={cercle} alt="banner" />
+                  <img className='img-anim' src={whyus} alt="banner" /></div>
               </Item>
             </Grid>
-            <Grid className='about-text' item xs={12} md={6}>
-              <Item className='shadow-remove'>
+            <Grid className='about-text wow fadeInRight' item xs={12} md={6}>
+              <Item className='shadow-remove remove-bg'>
                 <div className='text-box'>
                   <h3>Welcome to IBC Support</h3>
                   <p className='ab-text'>IBC Support Forum, established in 2016, stands as a stalwart in the Indian financial landscape, offering a comprehensive suite of legal services to financial creditors, operational creditors, and resolution applicants. With an unwavering commitment to facilitating smooth insolvency and bankruptcy proceedings, IBC Support Forum has earned its reputation as a trusted partner in the Indian Corporate / Banking sector.</p>

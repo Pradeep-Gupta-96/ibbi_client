@@ -1,4 +1,4 @@
-.footer {border-top: 1px solid #ccc;}
+.footer {border-top: 1px solid #ccc;background: url(../utility/map.png) repeat-x center; background-size: auto;}
 .footer .info-box {text-align: left;}
 .f-logo {margin-bottom: 10px;}
 .f-logo img {width: 150px;}

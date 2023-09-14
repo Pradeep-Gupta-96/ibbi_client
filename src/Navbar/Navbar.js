@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
+import "./animate.css"
 import { Link } from 'react-router-dom'
 import logo from './img/logo.png'
-
+ 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -17,7 +18,7 @@ const Navbar = () => {
   }, []); // Empty dependency array ensures the effect runs only once
 
   const handleScroll = () => {
-    const scroll = window.scrollY;
+    var scroll = window.scrollY;
 
     // Check if the user has scrolled beyond a certain point (e.g., 300 pixels)
     if (scroll >= 200) {
