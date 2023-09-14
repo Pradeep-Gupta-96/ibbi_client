@@ -65,7 +65,7 @@ p.tm-text {font-style: italic; font-size: 16px; line-height: 28px;}
 .authar-name strong {font-size: 18px;font-weight: bold;}
 .title-sec {display: flex;justify-content: space-between;}
 .np-aero {display: flex;}
-.np-aero a{width: 40px;height: 40px;bborder-radius: 25px;color: #20366a; font-size: 30px; margin-left: 15px;background: #fff;cursor: pointer;    display: flex;justify-content: center;align-items: center;}
+.np-aero a{width: 40px;height: 40px; border-radius: 25px;color: #20366a; font-size: 30px; margin-left: 15px;background: #fff;cursor: pointer;    display: flex;justify-content: center;align-items: center;}
 .cont-info {font-size: 20px;color: #20366a;}
 .pt-0 {padding-top: 0px !important;}
 
