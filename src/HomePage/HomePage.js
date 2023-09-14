@@ -42,13 +42,13 @@ const HomePage = () => {
     } catch (error) {
       console.log(error)
     }
-  } 
+  }
 
   React.useEffect(() => {
     fetchData1();
   }, []);
 
-  
+
   return (
     <>
       <div className="banner">
@@ -60,7 +60,7 @@ const HomePage = () => {
                   <h2>Whats New </h2>
                   <ul className='latest-new'>
                     {Result.map((item, index) => {
-                     return <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to={item.pdfLink}><b>{item.date}</b>&nbsp;&nbsp;{item.text}</Link></li>
+                      return <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to={item.pdfLink}><b>{item.date}</b>&nbsp;&nbsp;{item.text}</Link></li>
                     })}
                   </ul>
                   <div className='subscribe-btn'>
