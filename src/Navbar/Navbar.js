@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="topsec">
             <div className="logo"><img src={logo} alt="Logo" /></div>
             <div className="menu">
-              <Link to="javascript-void()" className='toggle-menu' style={{display:"none"}}>Menu</Link>
+              <Link to="/" className='toggle-menu' style={{display:"none"}}>Menu</Link>
               <ul>
                 <li className="nav-item parent"><Link className="nav-Link" to="/">Home</Link>
                   <ul>

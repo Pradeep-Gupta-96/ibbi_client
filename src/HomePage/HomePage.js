@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -33,20 +33,19 @@ const HomePage = () => {
 
   const API1 = `http://43.205.145.16:4000/api/whats_new`
 
-  const fetchData1 = async () => {
+  const fetchData1 = useCallback(async () => {
     try {
-      const response = await fetch(`${API1}`)
-
-      const result = await response.json()
-      setResults(result)
+      const response = await fetch(API1);
+      const result = await response.json();
+      setResults(result);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  }, [API1]); // Include API1 in the dependency array
 
   React.useEffect(() => {
     fetchData1();
-  }, []);
+  }, [fetchData1]);
 
 
   return (
@@ -60,7 +59,7 @@ const HomePage = () => {
                   <h2>Whats New </h2>
                   <ul className='latest-new'>
                     {Result.map((item, index) => {
-                      return <li><ArrowForwardIosIcon /> <Link className='send' target="_blank" to={item.pdfLink}><b>{item.date}</b>&nbsp;&nbsp;{item.text}</Link></li>
+                      return <li key={index}><ArrowForwardIosIcon /> <Link className='send' target="_blank" to={item.pdfLink}><b>{item.date}</b>&nbsp;&nbsp;{item.text}</Link></li>
                     })}
                   </ul>
                   <div className='subscribe-btn'>

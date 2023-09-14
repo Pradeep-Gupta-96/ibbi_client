@@ -18,7 +18,7 @@ const Announcements = () => {
 
     const API1 = `http://43.205.145.16:4000/api/public_announcement`
 
-    const fetchData1 = async (page) => {
+    const fetchData1 =React.useCallback( async (page) => {
         try {
             const response = await fetch(`${API1}?page=${page}`)
 
@@ -28,11 +28,11 @@ const Announcements = () => {
         } catch (error) {
             console.log(error)
         }
-    }
+    },[API1])
 
     React.useEffect(() => {
         fetchData1(page);
-    }, [page]);
+    }, [page, fetchData1]);
 
 
     return (

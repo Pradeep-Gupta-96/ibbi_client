@@ -8,8 +8,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import { Link } from '@mui/material';
 
 const InvitationofResolutionPlan = () => {
 
@@ -18,7 +16,7 @@ const InvitationofResolutionPlan = () => {
 
     const API1 = `http://43.205.145.16:4000/api/resolution_plans`
 
-    const fetchData1 = async (page) => {
+    const fetchData1 = React.useCallback(async (page) => {
         try {
             const response = await fetch(`${API1}?page=${page}`)
 
@@ -28,11 +26,11 @@ const InvitationofResolutionPlan = () => {
         } catch (error) {
             console.log(error)
         }
-    }
+    }, [API1])
 
     React.useEffect(() => {
         fetchData1(page);
-    }, [page]);
+    }, [page, fetchData1]);
 
 
     return (

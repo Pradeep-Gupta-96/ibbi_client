@@ -31,7 +31,7 @@ const AuctionNotices = () => {
 
     const API1 = `http://43.205.145.16:4000/api/auction_notices`
 
-    const fetchData1 = async (page) => {
+    const fetchData1 =React.useCallback( async (page) => {
         try {
             const response = await fetch(`${API1}?page=${page}`)
 
@@ -41,11 +41,11 @@ const AuctionNotices = () => {
         } catch (error) {
             console.log(error)
         }
-    }
+    },[API1])
 
     React.useEffect(() => {
         fetchData1(page);
-    }, [page]);
+    }, [page,fetchData1]);
 
 
     return (
