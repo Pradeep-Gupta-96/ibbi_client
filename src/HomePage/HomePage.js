@@ -65,7 +65,7 @@ const HomePage = () => {
                     })}
                   </ul>
                   <div className='subscribe-btn'>
-                    <Link to="#">Subscribe</Link>
+                    <Link to="/viewdeatils">more....</Link>
                   </div>
                 </div>
               </Item>

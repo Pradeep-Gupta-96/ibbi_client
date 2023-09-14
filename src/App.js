@@ -21,6 +21,7 @@ import NCLT from "./Orders/NCLT";
 import IBBI from "./Orders/IBBI";
 import IPARVO from "./Orders/IPARVO";
 import OTHERCOURTS from "./Orders/OTHERCOURTS";
+import Viewdeatils from "./HomePage/Viewdeatils";
 
 const myAllroute = [
   { path: "/", element: <HomePage /> },
@@ -43,6 +44,7 @@ const myAllroute = [
   { path: "/ibbi", element: <IBBI /> },
   { path: "/iparvo", element: <IPARVO /> },
   { path: "/othercourts", element: <OTHERCOURTS /> },
+  { path: "/viewdeatils", element: <Viewdeatils /> },
 ]
 
 function App() {
