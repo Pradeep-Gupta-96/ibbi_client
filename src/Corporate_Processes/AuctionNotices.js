@@ -16,14 +16,16 @@ const AuctionNotices = () => {
     const [page, setPage] = React.useState(0);
     const [Result, setResults] = React.useState([]);
 
-    const [open, setOpen] = React.useState(false);
+    const [openDialogIndex, setOpenDialogIndex] = React.useState(-1);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-      };
+    const handleClickOpen = (index) => {
+        // Open the dialog for the specified row
+        setOpenDialogIndex(index);
+    };
 
     const handleClose = () => {
-        setOpen(false);
+        // Close the dialog for the current row
+        setOpenDialogIndex(-1);
     };
 
 
@@ -75,6 +77,7 @@ const AuctionNotices = () => {
                                 <TableBody>
                                     {Result
                                         .map((item, index) => {
+                                            const isDialogOpen = openDialogIndex === index;
                                             return (
                                                 <TableRow hover role="checkbox" tabIndex={-1} key={index}>
                                                     <TableCell >{item.Type_of_AN}</TableCell>
@@ -89,18 +92,17 @@ const AuctionNotices = () => {
                                                     </TableCell>
                                                     <TableCell >{item.Reserve_Price}</TableCell>
                                                     <TableCell className='view-detail'>
-
-                                                        <Link variant="outlined" onClick={handleClickOpen} >
+                                                        <Link variant="outlined" onClick={() => handleClickOpen(index)}>
                                                             View Details..
                                                         </Link>
                                                         <Dialog
-                                                            open={open}
+                                                            open={isDialogOpen}
                                                             onClose={handleClose}
                                                             aria-labelledby="responsive-dialog-title"
                                                         >
                                                             <DialogContent>
                                                                 <DialogContentText>
-                                                                {/* <Dialoag /> */}
+                                                                    {item.Nature_of_Assets_to_be_Auctioned}
                                                                 </DialogContentText>
                                                             </DialogContent>
                                                             <DialogActions>
@@ -109,7 +111,6 @@ const AuctionNotices = () => {
                                                                 </Button>
                                                             </DialogActions>
                                                         </Dialog>
-
                                                     </TableCell>
 
                                                     <TableCell >{item.Last_Date_of_Submission_of_EMD}</TableCell>
