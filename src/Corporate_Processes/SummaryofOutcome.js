@@ -36,53 +36,65 @@ const SummaryofOutcome = () => {
 
 
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell >Date</TableCell>
-                            <TableCell >Subject</TableCell>
-                            <TableCell >PDF_File</TableCell>
-                            <TableCell >Excell_file</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {Result
-                            .map((item, index) => {
-                                return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                                        <TableCell >{item.Date}</TableCell>
-                                        <TableCell >{item.Subject}</TableCell>
-                                        <TableCell sx={{ cursor: 'pointer' }}>
-                                            <Link href={item.PDF_File} target="_blank" rel="noopener noreferrer">
-                                                <PictureAsPdfIcon />
-                                            </Link>
-                                        </TableCell>
-                                        <TableCell sx={{ cursor: 'pointer' }}>
-                                            <Link href={item.Excell_file} target="_blank" rel="noopener noreferrer">
-                                                <PictureAsPdfIcon />
-                                            </Link>
-                                        </TableCell>
+        <>
+            <div className="banner">
+                <div className="bound">
+                    <div className="page-title">Corporate Processes</div>
+                </div>
+            </div>
+            <div className="page-content">
+                <div className="bound">
+                    <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
+                        <TableContainer>
+                            <Table className='data-table' stickyHeader aria-label="sticky table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell >Date</TableCell>
+                                        <TableCell >Subject</TableCell>
+                                        <TableCell >PDF_File</TableCell>
+                                        <TableCell >Excell_file</TableCell>
                                     </TableRow>
-                                );
-                            })}
-                    </TableBody>
-                </Table>
-                <Stack spacing={2}>
+                                </TableHead>
+                                <TableBody>
+                                    {Result
+                                        .map((item, index) => {
+                                            return (
+                                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                                                    <TableCell >{item.Date}</TableCell>
+                                                    <TableCell >{item.Subject}</TableCell>
+                                                    <TableCell sx={{ cursor: 'pointer' }}>
+                                                        <Link href={item.PDF_File} target="_blank" rel="noopener noreferrer">
+                                                            <PictureAsPdfIcon />
+                                                        </Link>
+                                                    </TableCell>
+                                                    <TableCell sx={{ cursor: 'pointer' }}>
+                                                        <Link href={item.Excell_file} target="_blank" rel="noopener noreferrer">
+                                                            <PictureAsPdfIcon />
+                                                        </Link>
+                                                    </TableCell>
+                                                </TableRow>
+                                            );
+                                        })}
+                                </TableBody>
+                            </Table>
+                            <Stack spacing={2}>
 
-                    <Pagination
-                        count={4}
-                        page={page}
-                        onChange={(event, value) => setPage(value)}
-                        showFirstButton
-                        showLastButton
+                                <Pagination
+                                    count={4}
+                                    page={page}
+                                    onChange={(event, value) => setPage(value)}
+                                    showFirstButton
+                                    showLastButton
 
-                    />
-                </Stack>
-            </TableContainer>
+                                />
+                            </Stack>
+                        </TableContainer>
 
-        </Paper>
+                    </Paper>
+                </div>
+            </div>
+        </>
+
     )
 }
 export default SummaryofOutcome

@@ -36,49 +36,61 @@ const Orders = () => {
 
 
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell >Orders_Date</TableCell>
-                            <TableCell >Subject</TableCell>
-                            <TableCell >pdfLink</TableCell>
-                            <TableCell >Orders_Remarks</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {Result
-                            .map((item, index) => {
-                                return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                                        <TableCell >{item.Orders_Date}</TableCell>
-                                        <TableCell >{item.Subject}</TableCell>
-                                        <TableCell sx={{ cursor: 'pointer' }}>
-                                            <Link href={item.pdfLink} target="_blank" rel="noopener noreferrer">
-                                                <PictureAsPdfIcon />
-                                            </Link>
-                                        </TableCell>
-                                        <TableCell >{item.Orders_Remarks}</TableCell>
+        <>
+            <div className="banner">
+                <div className="bound">
+                    <div className="page-title">ORDERS</div>
+                </div>
+            </div>
+            <div className="page-content">
+                <div className="bound">
+                    <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
+                        <TableContainer>
+                            <Table className='data-table' stickyHeader aria-label="sticky table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell >Orders_Date</TableCell>
+                                        <TableCell >Subject</TableCell>
+                                        <TableCell >pdfLink</TableCell>
+                                        <TableCell >Orders_Remarks</TableCell>
                                     </TableRow>
-                                );
-                            })}
-                    </TableBody>
-                </Table>
-                <Stack spacing={2}>
+                                </TableHead>
+                                <TableBody>
+                                    {Result
+                                        .map((item, index) => {
+                                            return (
+                                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                                                    <TableCell >{item.Orders_Date}</TableCell>
+                                                    <TableCell >{item.Subject}</TableCell>
+                                                    <TableCell sx={{ cursor: 'pointer' }}>
+                                                        <Link href={item.pdfLink} target="_blank" rel="noopener noreferrer">
+                                                            <PictureAsPdfIcon />
+                                                        </Link>
+                                                    </TableCell>
+                                                    <TableCell >{item.Orders_Remarks}</TableCell>
+                                                </TableRow>
+                                            );
+                                        })}
+                                </TableBody>
+                            </Table>
+                            <Stack spacing={2}>
 
-                    <Pagination
-                        count={2170}
-                        page={page}
-                        onChange={(event, value) => setPage(value)}
-                        showFirstButton
-                        showLastButton
+                                <Pagination
+                                    count={2170}
+                                    page={page}
+                                    onChange={(event, value) => setPage(value)}
+                                    showFirstButton
+                                    showLastButton
 
-                    />
-                </Stack>
-            </TableContainer>
+                                />
+                            </Stack>
+                        </TableContainer>
 
-        </Paper>
+                    </Paper>
+                </div>
+            </div>
+        </>
+
     )
 }
 

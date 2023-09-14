@@ -36,47 +36,58 @@ const Claims = () => {
 
 
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell >CorporateDebtor</TableCell>
-                            <TableCell >Name_of_IRP_RP_Liquidator</TableCell>
-                            <TableCell >Under_Process</TableCell>
-                            <TableCell >Latest_Claim_As_On_Date</TableCell>
-                            <TableCell >View_Details</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {Result
-                            .map((item, index) => {
-                                return (
-                                    <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                                        <TableCell >{item.CorporateDebtor}</TableCell>
-                                        <TableCell >{item.Name_of_IRP_RP_Liquidator}</TableCell>
-                                        <TableCell >{item.Under_Process}</TableCell>
-                                        <TableCell >{item.Latest_Claim_As_On_Date}</TableCell>
-                                        <TableCell >{item.View_Details}</TableCell>
+        <>
+            <div className="banner">
+                <div className="bound">
+                    <div className="page-title">CLAIMS</div>
+                </div>
+            </div>
+            <div className="page-content">
+                <div className="bound">
+                    <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
+                        <TableContainer>
+                            <Table className='data-table' stickyHeader aria-label="sticky table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell >Corporate Debtor</TableCell>
+                                        <TableCell >Name of IRP / RP / Liquidator</TableCell>
+                                        <TableCell >Under Process</TableCell>
+                                        <TableCell >Latest Claim As On Date</TableCell>
+                                        <TableCell >View Details</TableCell>
                                     </TableRow>
-                                );
-                            })}
-                    </TableBody>
-                </Table>
-                <Stack spacing={2}>
+                                </TableHead>
+                                <TableBody>
+                                    {Result
+                                        .map((item, index) => {
+                                            return (
+                                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                                                    <TableCell >{item.CorporateDebtor}</TableCell>
+                                                    <TableCell >{item.Name_of_IRP_RP_Liquidator}</TableCell>
+                                                    <TableCell >{item.Under_Process}</TableCell>
+                                                    <TableCell >{item.Latest_Claim_As_On_Date}</TableCell>
+                                                    <TableCell >{item.View_Details}</TableCell>
+                                                </TableRow>
+                                            );
+                                        })}
+                                </TableBody>
+                            </Table>
+                            <Stack spacing={2}>
 
-                    <Pagination
-                        count={96}
-                        page={page}
-                        onChange={(event, value) => setPage(value)}
-                        showFirstButton
-                        showLastButton
+                                <Pagination
+                                    count={96}
+                                    page={page}
+                                    onChange={(event, value) => setPage(value)}
+                                    showFirstButton
+                                    showLastButton
 
-                    />
-                </Stack>
-            </TableContainer>
+                                />
+                            </Stack>
+                        </TableContainer>
 
-        </Paper>
+                    </Paper>
+                </div>
+            </div>
+        </>
     )
 }
 
