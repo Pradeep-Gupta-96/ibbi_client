@@ -6,7 +6,9 @@ body {font-family: 'Montserrat', sans-serif;}
 .banner-left .new-sec {text-align: left;padding: 15px;color: #20366a;}
 .banner-left .new-sec h2 {margin: 0px;}
 .banner-left .new-sec ul {padding-left: 0px;}
-.banner-left .new-sec ul li {list-style: none;border-bottom: dotted 1px #20366a; padding: 10px 0px;}
+.banner-left .new-sec ul li {list-style: none;border-bottom: dotted 1px #20366a; padding: 10px 0px;display: none;}
+.banner-left .new-sec ul li:nth-child(1), .banner-left .new-sec ul li:nth-child(2), .banner-left .new-sec ul li:nth-child(3), .banner-left .new-sec ul li:nth-child(4) {display: block;}
+.banner-left .new-sec ul li:nth-child(4) {border-bottom: 0px;}
 .banner-left .new-sec ul li:last-child {border-bottom: 0px;}
 .banner-left .new-sec ul li svg {display: inline-block;font-size: 12px;line-height: 20px;}
 .banner-left .new-sec ul li a {text-decoration: none;color: #20366a;}

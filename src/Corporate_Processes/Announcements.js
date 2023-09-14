@@ -45,7 +45,7 @@ const Announcements = () => {
             <div className="page-content">
                 <div className="bound">
                     <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
-                        <TableContainer sx={{ maxHeight: 440 }}>
+                        <TableContainer>
                             <Table className='data-table' stickyHeader aria-label="sticky table">
                                 <TableHead>
                                     <TableRow>
