@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="header">
         <div className="bound">
           <div className="topsec">
-            <div className="logo"><img src={logo} alt="Logo" /></div>
+            <div className="logo"><Link className="nav-Link" to="/"><img src={logo} alt="Logo" /></Link></div>
             <div className="menu">
               <Link to="javascript-void()" className='toggle-menu' style={{display:"none"}}>Menu</Link>
               <ul>

@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 body {font-family: 'Montserrat', sans-serif;}
-.banner {background: #20366a;margin-top: 10px;padding: 20px 0px;}
+.banner {background: #f7fafd;padding: 50px 0px;}
 .main-banner {padding:0px 0px;}
 .main-banner img {width: 100%;height: 285px;}
-.banner-left .new-sec {text-align: left;padding: 15px;color: #20366a;}
+.banner-left .new-sec {text-align: left;padding: 15px;color: #0e314c;}
 .banner-left .new-sec h2 {margin: 0px;}
 .banner-left .new-sec ul {padding-left: 0px;}
-.banner-left .new-sec ul li {list-style: none;border-bottom: dotted 1px #20366a; padding: 10px 0px;display: none;}
+.banner-left .new-sec ul li {list-style: none;border-bottom: dotted 1px #0e314c; padding: 10px 0px;display: none;}
 .banner-left .new-sec ul li:nth-child(1), .banner-left .new-sec ul li:nth-child(2), .banner-left .new-sec ul li:nth-child(3), .banner-left .new-sec ul li:nth-child(4) {display: block;}
 .banner-left .new-sec ul li:nth-child(4) {border-bottom: 0px;}
 .banner-left .new-sec ul li:last-child {border-bottom: 0px;}
 .banner-left .new-sec ul li svg {display: inline-block;font-size: 12px;line-height: 20px;}
-.banner-left .new-sec ul li a {text-decoration: none;color: #20366a;}
+.banner-left .new-sec ul li a {text-decoration: none;color: #0e314c;}
 .subscribe-btn {display: inline-block;width: 100%;}
 .subscribe-btn a {display: inline-block;width: 100%;}
 .subscribe-btn a,.blue-btn,.green-btn {background: #20366a;color: #fff;border: 1px solid #20366a;transition: all 1s ease 0s;padding: 10px 15px;display: inline-block;width: auto;}
@@ -21,7 +21,7 @@ body {font-family: 'Montserrat', sans-serif;}
 
 .quick-link {display: inline-block;width: 100%;padding: 50px 0px;}
 .shadow-remove {box-shadow: none !important;}
-.comman-title {text-align: left;color: #20366a;margin: 0px;font-size: 24px;line-height: 40px;}
+.comman-title {text-align: left;color: #0e314c;margin: 0px;font-size: 24px;line-height: 40px;}
 .quick-link .comman-title {color: #528fcb;}
 .btn-area {text-align: right;}
 .btn-area .blue-btn { margin-left: 20px;}
@@ -41,22 +41,22 @@ body {font-family: 'Montserrat', sans-serif;}
 .box-outer a:hover, .box-outer a:focus {background: #20366a;text-decoration: none;color: #fff;}
 .button_st a.green-btn {display: inline-block;width: 100%;margin: 30px 0px 0px;font-weight: 600;text-align: left;line-height: 30px;box-sizing: border-box;}
 
-.about-sec {background: #20366a;padding: 50px 0px;}
+.about-sec {background: #f7fafd;padding: 50px 0px;}
 .ab-img img {width: 100%;}
 .about.css-mhc70k-MuiGrid-root {background: #fff;padding: 5px 0px 20px;border-radius: 4px;}
 .about-text .text-box {padding: 20px;text-align: left;}
-.about-text .text-box h3 {color: #20366a;margin: 0px;font-size: 24px;line-height: 40px;}
-.about-text .text-box p {color: #20366a;font-size: 16px;} 
+.about-text .text-box h3 {color: #0e314c;margin: 0px;font-size: 24px;line-height: 40px;}
+.about-text .text-box p {color: #0e314c;font-size: 16px;} 
 .padding-50 {padding: 50px 0px;}
 .mb-30 {margin-bottom: 30px;}
-.services-sec .service-item {padding: 20px;border: 1px solid #f1f1f1;color: #20366a;}
+.services-sec .service-item {padding: 20px;border: 1px solid #f1f1f1;color: #0e314c;box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
 .services-sec .service-item h3 {font-size: 18px; margin-top: 0px;}
 .services-sec .service-item p {font-size: 16px;min-height: 100px;}
 
 .highlights-sec .comman-title {color: #fff;}
-.blue-bg {background: #20366a;}
+.blue-bg {background: #f7fafd;}
 .post-img img {width: 100%;}
-.content-box {padding: 20px;background: #fff;color: #20366a;}
+.content-box {padding: 20px;background: #fff;color: #0e314c;}
 .highlights-sec .service-item h3 {font-size: 18px; margin-top: 0px;}
 
 .testmonial-sec .content-box {font-size: 16px;}
@@ -65,8 +65,8 @@ p.tm-text {font-style: italic; font-size: 16px; line-height: 28px;}
 .authar-name strong {font-size: 18px;font-weight: bold;}
 .title-sec {display: flex;justify-content: space-between;}
 .np-aero {display: flex;}
-.np-aero a{width: 40px;height: 40px; border-radius: 25px;color: #20366a; font-size: 30px; margin-left: 15px;background: #fff;cursor: pointer;    display: flex;justify-content: center;align-items: center;}
-.cont-info {font-size: 20px;color: #20366a;}
+.np-aero a{width: 40px;height: 40px; border-radius: 25px;color: #0e314c; font-size: 30px; margin-left: 15px;background: #fff;cursor: pointer;    display: flex;justify-content: center;align-items: center;}
+.cont-info {font-size: 20px;color: #0e314c;}
 .pt-0 {padding-top: 0px !important;}
 
 
