@@ -28,15 +28,14 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Orders</Link>
                 <ul>
-                    <li><Link to="/">SUPREME COURT</Link></li>
+                    <li><Link to="/supremecourt">SUPREME COURT</Link></li>
                     <li><Link to="/highcourts">HIGH COURTs</Link></li>
-                    <li><Link to="/">NCLAT</Link></li>
-                    <li><Link to="/">NCLT</Link></li>
-                    <li><Link to="/drat">DRAT</Link></li>
+                    <li><Link to="/nclat">NCLAT</Link></li>
+                    <li><Link to="/nclt">NCLT</Link></li>
                     <li><Link to="/drts">DRTs</Link></li>
-                    <li><Link to="/">IBBI</Link></li>
-                    <li><Link to="/">IPA/RVO</Link></li>
-                    <li><Link to="/">OTHER COURTS</Link></li>
+                    <li><Link to="/ibbi">IBBI</Link></li>
+                    <li><Link to="/iparvo">IPA/RVO</Link></li>
+                    <li><Link to="/othercourts">OTHER COURTS</Link></li>
                     </ul>
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Announcements</Link>

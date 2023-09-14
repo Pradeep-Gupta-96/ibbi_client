@@ -13,9 +13,14 @@ import Claims from "./Corporate_Processes/Claims";
 import InvitationofResolutionPlan from "./Corporate_Processes/InvitationofResolutionPlan";
 import Orders from "./Corporate_Processes/Orders";
 import SummaryofOutcome from "./Corporate_Processes/SummaryofOutcome";
-import DRAT from "./Orders/DRAT";
 import DRTs from "./Orders/DRTs";
 import HIGHCOURTs from "./Orders/HIGHCOURTs";
+import SUPREMECOURT from "./Orders/SUPREMECOURT";
+import NCLAT from "./Orders/NCLAT";
+import NCLT from "./Orders/NCLT";
+import IBBI from "./Orders/IBBI";
+import IPARVO from "./Orders/IPARVO";
+import OTHERCOURTS from "./Orders/OTHERCOURTS";
 
 
 
@@ -74,15 +79,35 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="/drat" element={<DRAT />} />
-        </Routes>
-
-        <Routes>
           <Route path="/drts" element={<DRTs />} />
         </Routes>
 
         <Routes>
           <Route path="/highcourts" element={<HIGHCOURTs />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/supremecourt" element={<SUPREMECOURT />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/nclat" element={<NCLAT />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/nclt" element={<NCLT />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/ibbi" element={<IBBI />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/iparvo" element={<IPARVO />} />
+        </Routes>
+
+        <Routes>
+          <Route path="/othercourts" element={<OTHERCOURTS />} />
         </Routes>
 
         <Footer />
