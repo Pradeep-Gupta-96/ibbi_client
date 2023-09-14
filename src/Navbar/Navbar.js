@@ -1,13 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import logo from './img/logo.png'
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array ensures the effect runs only once
+
+  const handleScroll = () => {
+    const scroll = window.scrollY;
+
+    // Check if the user has scrolled beyond a certain point (e.g., 300 pixels)
+    if (scroll >= 200) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+  
   return (
 
     <>
-      <div className="header">
+      <div className={`header ${isScrolled ? 'fix-header' : ''}`}>
         <div className="bound">
           <div className="topsec">
             <div className="logo"><img src={logo} alt="Logo" /></div>
