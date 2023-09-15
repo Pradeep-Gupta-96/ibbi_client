@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 const Claims = () => {
 
@@ -65,11 +65,11 @@ const Claims = () => {
                                         .map((item, index) => {
                                             return (
                                                 <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                                                    <TableCell onClick={()=>onClickForViewDetails(item.claimNumber)} >{item.CorporateDebtor}</TableCell>
+                                                    <TableCell onClick={()=>onClickForViewDetails(item.claimNumber)} ><Link>{item.CorporateDebtor}</Link></TableCell>
                                                     <TableCell >{item.Name_of_IRP_RP_Liquidator}</TableCell>
                                                     <TableCell >{item.Under_Process}</TableCell>
                                                     <TableCell >{item.Latest_Claim_As_On_Date}</TableCell>
-                                                    <TableCell onClick={()=>onClickForViewDetails(item.claimNumber)} >{item.View_Details}</TableCell>
+                                                    <TableCell onClick={()=>onClickForViewDetails(item.claimNumber)} ><Link>{item.View_Details}</Link></TableCell>
                                                 </TableRow>
                                             );
                                         })}

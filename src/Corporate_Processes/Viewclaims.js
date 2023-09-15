@@ -41,15 +41,32 @@ const Viewclaims = () => {
                     <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
                         <TableContainer>
                             <Table className='data-table' stickyHeader aria-label="sticky table">
-                                <TableHead>
+                                
+                                <TableHead className='wiew-c-table'>
                                     <TableRow>
-                                        <TableCell >Corporate Debtor</TableCell>
-                                        <TableCell >Name of IRP / RP / Liquidator</TableCell>
-                                        <TableCell >Under Process</TableCell>
-                                        <TableCell >Latest Claim As On Date</TableCell>
-                                        <TableCell >View Details</TableCell>
+                                        <TableCell colSpan={14}>Annexure
+                                            Filing under clause (d) of sub-regulation (5) of regulation 31 of the IBBI (Liquidation Process) Regulations, 2016</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell rowSpan={2}>Sl.No.</TableCell>
+                                        <TableCell rowSpan={2}>Category of stakeholders</TableCell>
+                                        <TableCell colSpan={2}>Summary of Claims Received</TableCell>
+                                        <TableCell colSpan={2}>Summary of Claims Admitted</TableCell>
+                                        <TableCell rowSpan={2}>Amount of contingent claims</TableCell>
+                                        <TableCell rowSpan={2}>Amount of claims rejected</TableCell>
+
+                                        <TableCell rowSpan={2}>Amount of Claims under Verification</TableCell>
+                                        <TableCell rowSpan={2}>Details in Annexure</TableCell>
+                                        <TableCell rowSpan={2}>Remarks, if any</TableCell>
+                                    </TableRow>
+                                    <TableRow>
+                                        <TableCell>No. of Claims</TableCell>
+                                        <TableCell >Amount (Rs.)</TableCell>
+                                        <TableCell >No. of Claims</TableCell>
+                                        <TableCell >Amount of claims admitted</TableCell>
                                     </TableRow>
                                 </TableHead>
+                                
                                 <TableBody>
                                     {Result
                                         .map((item, index) => {
