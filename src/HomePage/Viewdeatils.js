@@ -45,7 +45,7 @@ const Viewdeatils = () => {
                             <Item>
                                 <div className='new-sec'>
                                     <h2>Whats New </h2>
-                                    <ul className='latest-new'>
+                                    <ul className='latest-new-'>
                                         {Result.map((item, index) => {
                                             return (
                                                 <>

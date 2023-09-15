@@ -26,6 +26,7 @@ img.img-anim {width: 90%;animation: up-down 2s ease-in-out infinite alternate-re
 .banner-left .new-sec ul li:last-child {border-bottom: 0px;}
 .banner-left .new-sec ul li svg {display: inline-block;font-size: 12px;line-height: 20px;}
 .banner-left .new-sec ul li a {text-decoration: none;color: #0e314c;}
+.banner-left .new-sec ul li a svg {float: right;font-size: 20px;color: #528fcb;}
 .subscribe-btn {display: inline-block;width: 100%;}
 .subscribe-btn a {display: inline-block;width: 100%;}
 .subscribe-btn a,.blue-btn,.green-btn {background: #528fcb;color: #fff;border: 1px solid #528fcb;transition: all 1s ease 0s;padding: 10px 15px;display: inline-block;width: auto;}
