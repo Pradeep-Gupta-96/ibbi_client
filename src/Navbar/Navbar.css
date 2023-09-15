@@ -9,17 +9,17 @@ a {text-decoration: none;}
 .header.fix-header {
     position: sticky;top: 0px;box-shadow: 0 0 10px 0 #ccc;z-index: 9;}
 .bound {max-width: 1240px;margin: 0px auto;width: 100%;}
-.topsec {display: flex;justify-content: space-between;padding: 10px 0px;align-items: baseline;}
-
+.topsec {display: flex;justify-content: space-between;padding: 10px 0px 0px;align-items: baseline;}
 .logo {font-weight: bold;}
 .logo img {height: 80px;}
+.menu {position: relative;top: -10px;}
 .menu ul {margin: 0px; padding: 0px; display: flex;}
 .menu ul li {display: flex; position: relative;}
-.menu ul li a {text-decoration: none; color: #20366a;padding: 0px 20px;font-weight: 500;line-height: 30px;}
-li.nav-item.get-free a {background: #20366a;color: #fff;border: 1px solid #20366a;transition: all 1s ease 0s;padding: 5px 20px;
+.menu ul li a {text-decoration: none; color: #0e314c;padding: 0px 20px;font-weight: 500;line-height: 30px;}
+li.nav-item.get-free a {background: #528fcb;color: #fff;border: 1px solid #528fcb;transition: all 1s ease 0s;padding: 5px 20px;
     margin-top: -10px;
     border-radius: 10px;}
-li.nav-item.get-free a:hover {background: #fff;color: #20366a;}
+li.nav-item.get-free a:hover {background: #fff;color: #528fcb;}
 .menu ul li > ul li {width: 100%;}
 .menu ul li > ul li a {padding: 10px 0px;font-size: 14px;border-bottom: 1px solid #ccc; width: 100%;display: inline-block;}
 .menu ul li > ul li:last-child a {border-bottom: 0px;}
@@ -41,9 +41,9 @@ li.nav-item.get-free a:hover {background: #fff;color: #20366a;}
 .contact-form .css-11bcn3z .MuiTextField-root:last-child input {height: 100px;}
 .table-row {margin: 30px 0px;}
 .data-table tr:nth-child(even) {background-color: rgb(241, 241, 241);}
-.data-table tr th {background:#616161; color: #fff;}
+.data-table tr th {background:#528fcb; color: #fff;}
 .data-table tr td {padding: 8px 16px;}
-.data-table tr td a svg {color: #616161;}
+.data-table tr td a svg {color: #528fcb;}
 .view-detail a {cursor: pointer;}
 
 @media (max-width: 767px) {
