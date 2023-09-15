@@ -6,7 +6,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import { useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 const Viewclaims = () => {
     const { id } = useParams()
     const [Result, setResults] = React.useState([]);
@@ -75,8 +75,14 @@ const Viewclaims = () => {
                                                     <TableCell >{item.CorporateDebtor}</TableCell>
                                                     <TableCell >{item.Name_of_IRP_RP_Liquidator}</TableCell>
                                                     <TableCell >{item.Under_Process}</TableCell>
-                                                    <TableCell >{item.Latest_Claim_As_On_Date}</TableCell>
-                                                    <TableCell  >{item.View_Details}</TableCell>
+                                                    <TableCell >{item.amount}</TableCell>
+                                                    <TableCell  >{item.number_claims1}</TableCell>
+                                                    <TableCell  >{item.claims_admitted1}</TableCell>
+                                                    <TableCell  >{item.contiget_claims1}</TableCell>
+                                                    <TableCell  >{item.climas_rejected1}</TableCell>
+                                                    <TableCell  >{item.under_varification1}</TableCell>
+                                                    <TableCell  >{item.annexure1}</TableCell>
+                                                    <TableCell  >{item.Remarks}</TableCell>
                                                 </TableRow>
                                             );
                                         })}
