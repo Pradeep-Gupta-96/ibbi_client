@@ -76,9 +76,13 @@ img.img-anim {width: 90%;animation: up-down 2s ease-in-out infinite alternate-re
 .content-box {padding: 20px;background: #fff;color: #0e314c;}
 .highlights-sec .service-item h3 {font-size: 18px; margin-top: 0px;}
 
+.tme-item {box-shadow: none;border-radius: 0px;border: 2px solid #0e314c;position: relative;}
+.quate-icon {position: absolute;top: -18px;right: 10px;background: #fff;}
 .testmonial-sec .content-box {font-size: 16px;}
-p.tm-text {font-style: italic; font-size: 16px; line-height: 28px;}
-.authar-name {margin-top: 20px;font-size: 14px;}
+p.tm-text {font-style: italic; font-size: 16px; line-height: 28px;text-align: justify;-webkit-line-clamp: 6;
+    display: -webkit-box; -webkit-box-orient: vertical; white-space: normal; overflow: hidden; margin-top: 0px;}
+.authar-name img {float: left; width: 50px; border-radius: 50%;}
+.authar-name {margin-top: 20px;font-size: 14px;text-align: right;}
 .authar-name strong {font-size: 18px;font-weight: bold;}
 .title-sec {display: flex;justify-content: space-between;}
 .np-aero {display: flex;}

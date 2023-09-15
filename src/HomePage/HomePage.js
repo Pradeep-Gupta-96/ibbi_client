@@ -18,6 +18,7 @@ import stakeholders from '../utility/stakeholders-1.png'
 import TENDER from '../utility/tender-1.png'
 import workshop from '../utility/workshop-1.png'
 import aboutimg from '../utility/about-img.jpeg'
+import nophoto from '../utility/no-photo.jpg'
 import { Link } from 'react-router-dom'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -232,13 +233,30 @@ const HomePage = () => {
         <div className="bound">
           <h3 className="comman-title mb-30">Testimonials</h3>
           <Grid className="tm-items" container spacing={2}>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12} md={4}>
               <Item className='tme-item'>
-
                 <div className="content-box">
                   <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
                   <p className='tm-text'><i>IBC Support Forum's professionalism and commitment to our success were remarkable. They provided clear and effective solutions that helped us recover debts we thought were lost forever. We're extremely grateful for their support.</i></p>
-                  <div className="authar-name"><strong>Jay Patel</strong><br />Designation</div>
+                  <div className="authar-name"><img src={nophoto} alt="User Icon" /><strong>Jay Patel</strong><br />Designation</div>
+                </div>
+              </Item>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='tme-item'>
+                <div className="content-box">
+                  <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
+                  <p className='tm-text'><i>Working with IBC Support Forum was a wise decision for our organization. Their expertise in IBC matters is unmatched, and their dedication to helping us achieve the best outcomes was evident throughout our partnership. They are true experts in their field.</i></p>
+                  <div className="authar-name"><img src={nophoto} alt="User Icon" /><strong>Sophia</strong><br />Designation</div>
+                </div>
+              </Item>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Item className='tme-item'>
+                <div className="content-box">
+                  <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
+                  <p className='tm-text'><i>Working with IBC Support Forum was a breath of fresh air. Their commitment to excellence and in-depth knowledge of IBC matters shone through in every interaction. They delivered results that exceeded our expectations.</i></p>
+                  <div className="authar-name"><img src={nophoto} alt="User Icon" /><strong>David</strong><br />Designation</div>
                 </div>
               </Item>
             </Grid>

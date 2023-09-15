@@ -37,7 +37,7 @@ const IPARVO = () => {
     <>
       <div className="banner">
         <div className="bound">
-          <div className="page-title">IPARVO</div>
+          <div className="page-title">IPA/RVO</div>
         </div>
       </div>
       <div className="page-content">
