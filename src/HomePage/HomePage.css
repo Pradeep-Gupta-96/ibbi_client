@@ -33,6 +33,14 @@ img.img-anim {width: 90%;animation: up-down 2s ease-in-out infinite alternate-re
 .subscribe-btn a:hover,.blue-btn:hover {background: #fff;color: #528fcb;}
 .green-btn {border-color: #528fcb; background: #528fcb; margin-left: 20px;}
 .green-btn:hover {color: #528fcb; background: #fff;}
+.banner-left .new-sec .data-table tbody tr td{display: none;font-size: 13px;line-height: 18px;}
+.banner-left .new-sec .data-table tr th {font-size: 13px;line-height: 20px;}
+.banner-left .new-sec .data-table tbody tr:nth-child(1) td,
+.banner-left .new-sec .data-table tbody tr:nth-child(2) td,
+.banner-left .new-sec .data-table tbody tr:nth-child(3) td{display: table-cell;}
+.banner-left .table-row {margin: 20px 0px 0px;} 
+a.more-cont {padding: 10px 16px; display: inline-block; width: 100%;  box-sizing: border-box;text-decoration: underline;
+    font-weight: bold;color: #528fcb;}
 
 .quick-link {display: inline-block;width: 100%;padding: 50px 0px;}
 .shadow-remove {box-shadow: none !important;}
@@ -57,7 +65,7 @@ img.img-anim {width: 90%;animation: up-down 2s ease-in-out infinite alternate-re
 .box-outer a:hover, .box-outer a:focus {background: #528fcb;text-decoration: none;color: #fff;}
 .button_st a.green-btn {display: inline-block;width: 100%;margin: 30px 0px 0px;font-weight: 600;text-align: left;line-height: 30px;box-sizing: border-box;}
 
-.about-sec {background: #f7fafd;padding: 50px 0px;}
+.about-sec {padding: 50px 0px;}
 .ab-img {position: relative;}
 .ab-img img {width: 100%;}
 .about.css-mhc70k-MuiGrid-root {padding: 5px 0px 20px;border-radius: 4px;}

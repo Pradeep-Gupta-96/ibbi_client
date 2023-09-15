@@ -5,6 +5,7 @@ body {padding: 0px;margin: 0px;box-sizing: border-box;font-family: 'Montserrat',
 .p-50 {padding: 50px 0px;}
 
 a {text-decoration: none;}
+.topbar {background: #528fcb;color: #fff;padding: 10px 0px;}
 .header {display: inline-block;width: 100%;box-shadow: 0 2px 28px 0 rgba(0,0,0,.06);background: #fff;transition: all 1s ease 0s;top: -120px;}
 .header.fix-header {
     position: sticky;top: 0px;box-shadow: 0 0 10px 0 #ccc;z-index: 9;}
@@ -41,13 +42,14 @@ li.nav-item.get-free a:hover {background: #fff;color: #528fcb;}
 .contact-form .css-11bcn3z .MuiTextField-root:last-child input {height: 100px;}
 .table-row {margin: 30px 0px;}
 .table-row .data-table{border-spacing: 0;border-collapse: collapse;}
-.data-table .wiew-c-table tr th {text-align: center;}
+.data-table .wiew-c-table tr th {text-align: center;white-space: nowrap;border: 1px solid #ddd;}
 .data-table tr:nth-child(even) {background-color: rgb(241, 241, 241);}
-.data-table tr th {background:#528fcb; color: #fff;    white-space: nowrap;border: 1px solid #ddd;}
+.data-table tr th {background:#528fcb; color: #fff;    }
 .data-table tr td {padding: 8px 16px;}
 .data-table tr td a svg {color: #528fcb;}
 .view-detail a {cursor: pointer;}
 .data-table tr td a {color: #528fcb;text-decoration: underline;cursor: pointer;}
+.gray-bg {background: #f9f6f6;}
 
 @media (max-width: 767px) {
     .bound {padding: 0px 15px;box-sizing: border-box;}

@@ -31,6 +31,7 @@ const Navbar = () => {
   return (
 
     <>
+      <div className="topbar"><marquee>IBC Support: Navigating Corporate Insolvency with Expertise and Excellence</marquee></div>
       <div className={`header ${isScrolled ? 'fix-header' : ''}`}>
         <div className="bound">
           <div className="topsec">

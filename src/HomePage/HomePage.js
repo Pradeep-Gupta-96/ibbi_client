@@ -19,9 +19,9 @@ import TENDER from '../utility/tender-1.png'
 import workshop from '../utility/workshop-1.png'
 import aboutimg from '../utility/about-img.jpeg'
 import nophoto from '../utility/no-photo.jpg'
-import { Link } from 'react-router-dom'
-import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import { Pagination, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Link as Jetha } from '@mui/material'
+import { Link } from "react-router-dom"
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -33,26 +33,25 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const HomePage = () => {
 
-  const [page, setPage] = React.useState(0);
   const [Result, setResults] = React.useState([]);
 
   const API1 = `http://43.205.145.16:4000/api/public_announcement`
 
-  const fetchData1 =React.useCallback( async (page) => {
-      try {
-          const response = await fetch(`${API1}?page=${page}`)
+  const fetchData1 = React.useCallback(async () => {
+    try {
+      const response = await fetch(`${API1}`)
 
-          const result = await response.json()
+      const result = await response.json()
 
-          setResults(result)
-      } catch (error) {
-          console.log(error)
-      }
-  },[API1])
+      setResults(result)
+    } catch (error) {
+      console.log(error)
+    }
+  }, [API1])
 
   React.useEffect(() => {
-      fetchData1(page);
-  }, [page, fetchData1]);
+    fetchData1();
+  }, [fetchData1]);
 
   return (
     <>
@@ -61,59 +60,43 @@ const HomePage = () => {
           <Grid className="main-banner" container spacing={2}>
             <Grid className='banner-left' item xs={12} md={6}>
               <Item>
-                <Typography variant='subtitle1' >PUBLIC ANNOUNCEMENT</Typography>
-              <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
-                        <TableContainer>
-                            <Table className='data-table' stickyHeader aria-label="sticky table">
-                                <TableHead>
-                                    <TableRow>
-                                        <TableCell >Type of PA</TableCell>
-                                        <TableCell >Date of Announcement</TableCell>
-                                        <TableCell >Last date of Submission</TableCell>
-                                        <TableCell >Name of Corporate Debtor</TableCell>
-                                        <TableCell >Name of Applicant</TableCell>
-                                        <TableCell >Name of Insolvency Professional</TableCell>
-                                        <TableCell >Public Announcement</TableCell>
-                                    </TableRow>
-                                </TableHead>
-                                <TableBody>
-                                    {Result
-                                        .map((item, index) => {
-                                            return (
-                                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                                                    <TableCell >{item.typeOfPA}</TableCell>
-                                                    <TableCell >{item.dateOfAnnouncement}</TableCell>
-                                                    <TableCell >{item.lastDateOfSubmission}</TableCell>
-                                                    <TableCell >{item.corporateDebtor}</TableCell>
-                                                    <TableCell >{item.nameOfApplicant}</TableCell>
-                                                    <TableCell >{item.nameOfIP}</TableCell>
-                                                    <TableCell sx={{ cursor: 'pointer' }}>
-                                                        <Link href={item.pdfLink} target="_blank" rel="noopener noreferrer">
-                                                            <PictureAsPdfIcon />
-                                                        </Link>
-                                                    </TableCell>
-                                                </TableRow>
-                                            );
-                                        })}
-                                </TableBody>
-                            </Table>
-                            <Stack spacing={2}>
+                <div className='new-sec'>
+                  <h2>PUBLIC ANNOUNCEMENT</h2>
+                  <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
+                    <TableContainer>
+                      <Table className='data-table' stickyHeader aria-label="sticky table">
+                        <TableHead>
+                          <TableRow>
+                            <TableCell sx={{ width: '36%' }}>Type of Public Announcement</TableCell>
+                            <TableCell >Date of Announcement</TableCell>
+                            <TableCell >Name of Corporate Debtor</TableCell>
+                            <TableCell >Name of Insolvency Professional</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {Result
+                            .map((item, index) => {
+                              return (
+                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                                  <TableCell sx={{ cursor: 'pointer' }}>
+                                    <Jetha href={item.pdfLink} target="_blank" rel="noopener noreferrer">{item.typeOfPA}</Jetha>
+                                  </TableCell>
+                                  <TableCell >{item.dateOfAnnouncement}</TableCell>
+                                  <TableCell >{item.corporateDebtor}</TableCell>
+                                  <TableCell >{item.nameOfIP}</TableCell>
+                                </TableRow>
+                              );
+                            })}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+                    <Link className='more-cont' to="/announcement">Show More...</Link>
+                  </Paper>
+                </div>
 
-                                <Pagination
-                                    count={525}
-                                    page={page}
-                                    onChange={(event, value) => setPage(value)}
-                                    showFirstButton
-                                    showLastButton
 
-                                />
-                            </Stack>
-                        </TableContainer>
 
-                    </Paper>
-             
-                    <Link to="/announcement">more....</Link>
-           
+
               </Item>
             </Grid>
 
@@ -184,7 +167,7 @@ const HomePage = () => {
           </Grid>
         </div>
       </div>
-      <div className='about-sec'>
+      <div className='about-sec gray-bg'>
         <div className="bound">
           <Grid className="about" container spacing={2}>
             <Grid item xs={12} md={6}>
@@ -234,7 +217,7 @@ const HomePage = () => {
           </Grid>
         </div>
       </div>
-      <div className='highlights-sec blue-bg padding-50'>
+      <div className='highlights-sec gray-bg padding-50'>
         <div className="bound">
           <div className="title-sec mb-30">
             <h3 className="comman-title">Highlights</h3>
