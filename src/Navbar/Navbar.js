@@ -70,6 +70,7 @@ const Navbar = () => {
                     <li><Link to="/Auction">Auction Notices</Link></li>
                     <li><Link to="/Orders">Orders</Link></li>
                     <li><Link to="/Summary">Summary of Outcome</Link></li>
+                    <li><Link to="/viewdeatils">Whats New</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="#">Blog</Link></li>

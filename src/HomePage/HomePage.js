@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -20,7 +20,8 @@ import workshop from '../utility/workshop-1.png'
 import aboutimg from '../utility/about-img.jpeg'
 import nophoto from '../utility/no-photo.jpg'
 import { Link } from 'react-router-dom'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import { Pagination, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -32,24 +33,26 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const HomePage = () => {
 
+  const [page, setPage] = React.useState(0);
   const [Result, setResults] = React.useState([]);
 
-  const API1 = `http://43.205.145.16:4000/api/whats_new`
+  const API1 = `http://43.205.145.16:4000/api/public_announcement`
 
-  const fetchData1 = useCallback(async () => {
-    try {
-      const response = await fetch(API1);
-      const result = await response.json();
-      setResults(result);
-    } catch (error) {
-      console.log(error);
-    }
-  }, [API1]); // Include API1 in the dependency array
+  const fetchData1 =React.useCallback( async (page) => {
+      try {
+          const response = await fetch(`${API1}?page=${page}`)
+
+          const result = await response.json()
+
+          setResults(result)
+      } catch (error) {
+          console.log(error)
+      }
+  },[API1])
 
   React.useEffect(() => {
-    fetchData1();
-  }, [fetchData1]);
-
+      fetchData1(page);
+  }, [page, fetchData1]);
 
   return (
     <>
@@ -58,17 +61,59 @@ const HomePage = () => {
           <Grid className="main-banner" container spacing={2}>
             <Grid className='banner-left' item xs={12} md={6}>
               <Item>
-                <div className='new-sec'>
-                  <h2>Whats New </h2>
-                  <ul className='latest-new'>
-                    {Result.map((item, index) => {
-                      return <li key={index}><ArrowForwardIosIcon /> <Link className='send' target="_blank" to={item.pdfLink}><b>{item.date}</b>&nbsp;&nbsp;{item.text}</Link></li>
-                    })}
-                  </ul>
-                  <div className='subscribe-btn'>
-                    <Link to="/viewdeatils">more....</Link>
-                  </div>
-                </div>
+                <Typography variant='subtitle1' >PUBLIC ANNOUNCEMENT</Typography>
+              <Paper className='table-row' sx={{ width: '100%', overflow: 'hidden' }}>
+                        <TableContainer>
+                            <Table className='data-table' stickyHeader aria-label="sticky table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell >Type of PA</TableCell>
+                                        <TableCell >Date of Announcement</TableCell>
+                                        <TableCell >Last date of Submission</TableCell>
+                                        <TableCell >Name of Corporate Debtor</TableCell>
+                                        <TableCell >Name of Applicant</TableCell>
+                                        <TableCell >Name of Insolvency Professional</TableCell>
+                                        <TableCell >Public Announcement</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {Result
+                                        .map((item, index) => {
+                                            return (
+                                                <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                                                    <TableCell >{item.typeOfPA}</TableCell>
+                                                    <TableCell >{item.dateOfAnnouncement}</TableCell>
+                                                    <TableCell >{item.lastDateOfSubmission}</TableCell>
+                                                    <TableCell >{item.corporateDebtor}</TableCell>
+                                                    <TableCell >{item.nameOfApplicant}</TableCell>
+                                                    <TableCell >{item.nameOfIP}</TableCell>
+                                                    <TableCell sx={{ cursor: 'pointer' }}>
+                                                        <Link href={item.pdfLink} target="_blank" rel="noopener noreferrer">
+                                                            <PictureAsPdfIcon />
+                                                        </Link>
+                                                    </TableCell>
+                                                </TableRow>
+                                            );
+                                        })}
+                                </TableBody>
+                            </Table>
+                            <Stack spacing={2}>
+
+                                <Pagination
+                                    count={525}
+                                    page={page}
+                                    onChange={(event, value) => setPage(value)}
+                                    showFirstButton
+                                    showLastButton
+
+                                />
+                            </Stack>
+                        </TableContainer>
+
+                    </Paper>
+             
+                    <Link to="/announcement">more....</Link>
+           
               </Item>
             </Grid>
 
