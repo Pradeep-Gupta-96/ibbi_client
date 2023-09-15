@@ -37,7 +37,7 @@ const HIGHCOURTs = () => {
     <>
       <div className="banner">
         <div className="bound">
-          <div className="page-title">PUBLIC ANNOUNCEMENT</div>
+          <div className="page-title">HIGH COURTs</div>
         </div>
       </div>
       <div className="page-content">

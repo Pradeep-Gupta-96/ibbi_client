@@ -37,7 +37,7 @@ const DRTs = () => {
     <>
       <div className="banner">
         <div className="bound">
-          <div className="page-title">PUBLIC ANNOUNCEMENT</div>
+          <div className="page-title">DRTs</div>
         </div>
       </div>
       <div className="page-content">
