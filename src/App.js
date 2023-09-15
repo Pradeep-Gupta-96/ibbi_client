@@ -22,6 +22,7 @@ import IBBI from "./Orders/IBBI";
 import IPARVO from "./Orders/IPARVO";
 import OTHERCOURTS from "./Orders/OTHERCOURTS";
 import Viewdeatils from "./HomePage/Viewdeatils";
+import Viewclaims from "./Corporate_Processes/Viewclaims";
 
 const myAllroute = [
   { path: "/", element: <HomePage /> },
@@ -45,6 +46,7 @@ const myAllroute = [
   { path: "/iparvo", element: <IPARVO /> },
   { path: "/othercourts", element: <OTHERCOURTS /> },
   { path: "/viewdeatils", element: <Viewdeatils /> },
+  { path: "/Viewclaims/:id", element: <Viewclaims /> },
 ]
 
 function App() {
