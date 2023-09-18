@@ -26,8 +26,24 @@ li.nav-item.get-free a:hover {background: #fff;color: #528fcb;}
 .menu ul li > ul li:last-child a {border-bottom: 0px;}
 
 .menu ul li.parent {position: relative;display: inline-block;}
-.menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 206px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 9;padding: 10px 15px;}
+.menu ul li.parent ul {display: none;position: absolute;background-color: #f1f1f1;min-width: 224px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 9;padding: 10px 15px;}
 .menu ul li.parent:hover ul {display: block;}
+
+/* Footer Css */
+.footer {border-top: 1px solid #ccc;background: url(../utility/map.png) repeat-x center; background-size: auto;}
+.footer .info-box {text-align: left;}
+.f-logo {margin-bottom: 10px;}
+.f-logo img {width: 150px;}
+.fab-content {font-weight: 500;color: #20366a;}
+.footer ul.c-ingo {padding: 0px;margin: 0px;}
+.footer ul.c-ingo li {list-style: none;font-size: 16px;font-weight: 500; color: #20366a;line-height: 40px;display: flex;align-items: center;}
+.footer ul.c-ingo li svg {margin-right: 10px;}
+.social-icon {display: flex;border-top: 1px solid;width: 100%;padding-top: 10px;margin-top: 10px;color: #20366a;font-weight: 500;}
+.social-icon a {color: #20366a; margin-left: 20px;}
+
+.copyright {background: #528fcb;}
+.remove-bg {background: none !important;}
+.copyright p {color: #fff;}
 
 /* Inner pages */
 .page-title {color: #528fcb; font-size: 30px; line-height: 40px;font-weight: 600;    margin-top: 40px;}
@@ -50,6 +66,11 @@ li.nav-item.get-free a:hover {background: #fff;color: #528fcb;}
 .view-detail a {cursor: pointer;}
 .data-table tr td a {color: #528fcb;text-decoration: underline;cursor: pointer;}
 .gray-bg {background: #f9f6f6;}
+.page-content {padding: 0px 0px;}
+.pb-40 {padding-bottom: 40px;}
+.page-content p {text-align: justify;line-height: 24px;}
+img.alignright {float: right;margin: 5px 0 20px 20px;}
+.page-banner {width: 100%;}
 
 @media (max-width: 767px) {
     .bound {padding: 0px 15px;box-sizing: border-box;}

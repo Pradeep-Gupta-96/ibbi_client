@@ -74,9 +74,11 @@ a.more-cont {padding: 10px 16px; display: inline-block; width: 100%;  box-sizing
 .about-text .text-box p {color: #0e314c;font-size: 18px;line-height: 180%;} 
 .padding-50 {padding: 50px 0px;}
 .mb-30 {margin-bottom: 30px;}
-.services-sec .service-item {padding: 20px;border: 1px solid #f1f1f1;color: #0e314c;box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);}
-.services-sec .service-item h3 {font-size: 18px; margin-top: 0px;}
-.services-sec .service-item p {font-size: 16px;min-height: 100px;}
+.services-sec .service-item {padding: 20px;border: 1px solid #f1f1f1;color: #0e314c;box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);    display: flex;
+    flex-wrap: wrap; height: 100%; box-sizing: border-box;transition: all 1s ease 0s;}
+.services-sec .service-item:hover {transform: scale(1.1);}
+.services-sec .service-item h3 {font-size: 18px; margin-top: 0px;text-align: center;width: 100%;}
+.services-sec .service-item p {font-size: 16px;min-height: 100px; text-align: center;}
 
 .highlights-sec .comman-title {color: #528fcb;}
 .blue-bg {background: #f7fafd;}

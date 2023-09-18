@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
-import "./animate.css"
 import { Link } from 'react-router-dom'
 import logo from './img/logo.png'
  
@@ -46,9 +45,11 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Services</Link>
                   <ul>
-                    <li><Link to="#">For Financial Creditor</Link></li>
-                    <li><Link to="#">For Operational Creditor</Link></li>
-                    <li><Link to="#">For Resolution Applicant</Link></li>
+                    <li><Link to="/financial-creditor">For Financial Creditor</Link></li>
+                    <li><Link to="/operational-creditor">For Operational Creditor</Link></li>
+                    <li><Link to="/resolution-applicant">For Resolution Applicant</Link></li>
+                    <li><Link to="/resolution-professional">For Resolution Professional / Interim Resolution Professional</Link></li>
+                    <li><Link to="/liquidator">For Liquidator</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Orders</Link>

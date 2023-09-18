@@ -1,7 +1,6 @@
 import React from 'react'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import './Footer.css'
 import { Grid } from '@mui/material'
 import footerlogo from '../utility/logo.png'
 import { Link } from 'react-router-dom';

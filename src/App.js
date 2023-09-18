@@ -23,6 +23,11 @@ import IPARVO from "./Orders/IPARVO";
 import OTHERCOURTS from "./Orders/OTHERCOURTS";
 import Viewdeatils from "./HomePage/Viewdeatils";
 import Viewclaims from "./Corporate_Processes/Viewclaims";
+import FinancialCreditor from "./services/Financial_Creditor";
+import OperationalCreditor from "./services/Operational_Creditor";
+import ResolutionApplicant from "./services/Resolution_Applicant";
+import ResolutionProfessional from "./services/Resolution_Professional";
+import Liquidator from "./services/Liquidator";
 
 const myAllroute = [
   { path: "/", element: <HomePage /> },
@@ -47,6 +52,11 @@ const myAllroute = [
   { path: "/othercourts", element: <OTHERCOURTS /> },
   { path: "/viewdeatils", element: <Viewdeatils /> },
   { path: "/Viewclaims/:id", element: <Viewclaims /> },
+  { path: "/financial-creditor", element: <FinancialCreditor /> },
+  { path: "/operational-creditor", element: <OperationalCreditor /> },
+  { path: "/resolution-applicant", element: <ResolutionApplicant /> },
+  { path: "/resolution-professional", element: <ResolutionProfessional /> },
+  { path: "/liquidator", element: <Liquidator /> },
 ]
 
 function App() {
