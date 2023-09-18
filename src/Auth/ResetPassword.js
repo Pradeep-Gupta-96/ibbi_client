@@ -88,7 +88,7 @@ function ResetPassword() {
       return; // Exit the function
     }
 
-    const API = `http://localhost:4000/user/resetPassword`;
+    const API = `http://43.205.145.16:4000/user/resetPassword`;
 
     // Extract the specific form fields you want to send as JSON data
     const jsonData = {
