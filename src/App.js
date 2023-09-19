@@ -28,6 +28,9 @@ import OperationalCreditor from "./services/Operational_Creditor";
 import ResolutionApplicant from "./services/Resolution_Applicant";
 import ResolutionProfessional from "./services/Resolution_Professional";
 import Liquidator from "./services/Liquidator";
+import Highlights from "./blog/Highlights";
+import Blogs from "./blog/Blogs";
+import PostDetails from "./blog/PostDetails";
 
 const myAllroute = [
   { path: "/", element: <HomePage /> },
@@ -57,6 +60,9 @@ const myAllroute = [
   { path: "/resolution-applicant", element: <ResolutionApplicant /> },
   { path: "/resolution-professional", element: <ResolutionProfessional /> },
   { path: "/liquidator", element: <Liquidator /> },
+  { path: "/blogs", element: <Blogs /> },
+  { path: "/highlights", element: <Highlights /> },
+  { path: "/postdetails", element: <PostDetails /> },
 ]
 
 function App() {

@@ -75,7 +75,7 @@ const Navbar = () => {
                     <li><Link to="/viewdeatils">Whats New</Link></li>
                   </ul>
                 </li>
-                <li className="nav-item"><Link className="nav-Link" to="#">Blog</Link></li>
+                <li className="nav-item"><Link className="nav-Link" to="/blogs">Blog</Link></li>
                 <li className="nav-item"><Link className="nav-Link" to="/contact-us">Contacts</Link></li>
                 <li className="nav-item get-free"><Link className="nav-Link" to="#">Get Free Consultation</Link></li>
               </ul>

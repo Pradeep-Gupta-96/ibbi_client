@@ -71,6 +71,8 @@ li.nav-item.get-free a:hover {background: #fff;color: #528fcb;}
 .page-content p {text-align: justify;line-height: 24px;}
 img.alignright {float: right;margin: 5px 0 20px 20px;}
 .page-banner {width: 100%;}
+.add-post-sec {background: #fff;padding: 8px;border-radius: 4px;margin-bottom: 20px;}
+.add-post-sec h3 {padding-left: 10px;}
 
 @media (max-width: 767px) {
     .bound {padding: 0px 15px;box-sizing: border-box;}
