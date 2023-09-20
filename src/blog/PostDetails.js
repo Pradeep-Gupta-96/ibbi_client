@@ -1,18 +1,56 @@
-import React from 'react'
-import aboutusimg from '../utility/about-us-img.png'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 
 const PostDetails = () => {
+
+    const [title, settitle] = useState("");
+    const [image, setimage] = useState("");
+    const [description, setdescription] = useState("");
+
+    const { id, dynamicurl } = useParams()
+
+    console.log(dynamicurl)
+
+    useEffect(() => {
+        // Define the API endpoint URL
+        const apiUrl = `http://43.205.145.16:4000/blog/getTodoById/${id}`;
+
+        // Create an async function to fetch todos
+        async function fetchTodos() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                settitle(data.todo.title); // Assuming the response contains a single todo
+                setimage(data.todo.image); // Assuming the response contains a single todo
+                setdescription(data.todo.description); // Assuming the response contains a single todo
+            } catch (error) {
+                console.error('Error fetching todos:', error);
+            }
+        }
+
+        // Call the async function
+        fetchTodos();
+    }, [id]); // The empty dependency array means this effect runs once after the initial render
+
+    const resolveImageUrl = (relativeUrl) => {
+        const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
+        return `${baseUrl}${relativeUrl}`;
+    };
+
     return (
         <>
             <div className="banner">
                 <div className="bound">
-                    <div className="page-title">Post title</div>
+                    <div className="page-title">{title}</div>
                 </div>
             </div>
             <div className="page-content pb-40">
                 <div className="bound">
-                    <p><img className='page-banner' src={aboutusimg} alt="banner" /></p>
-                    <p>Welcome to IBC Support, a specialized platform dedicated to facilitating and enhancing the corporate insolvency resolution process in alignment with the Indian Insolvency and Bankruptcy Code (IBC), 2016. Our primary focus is to provide vital services and assistance to a diverse range of stakeholders, including financial creditors, operational creditors, resolution applicants, Insolvency professionals (IRP/RP/Liquidator). Whether it's aiding in filling of Section 7/9 application, claim submissions, document drafting or review, legal representation, or other services pertaining to the insolvency process, we offer comprehensive solutions to navigate the complexities of insolvency, streamline procedures, and ultimately drive successful resolutions for distressed entities.</p>
+                    <p><img src={resolveImageUrl(image)} alt="banner" /></p>
+                    <p className='ab-text' dangerouslySetInnerHTML={{ __html: description }}></p>
                 </div>
             </div>
         </>

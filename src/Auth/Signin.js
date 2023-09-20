@@ -11,7 +11,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Alert, Box, Divider, Grid, IconButton, InputAdornment, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -31,6 +31,7 @@ function Signin() {
     const [visivility, setVisivility] = React.useState(false)
     const [error, setError] = React.useState('');
     const [success, setSuccess] = React.useState('');
+    const navigate=useNavigate()
     
 
     const changeicons = () => {
@@ -77,12 +78,12 @@ function Signin() {
         try {
             // Make the HTTP POST request using the postJsonData function
             const { response, result } = await postJsonData(API, jsonData); // Destructure response and result
-            console.log(result.message);
 
             if (response.ok) {
                 // Save the token in localStorage
-                localStorage.setItem('token', result.token);
+                localStorage.setItem("token", result.token);
                 setSuccess('Login successful');
+                navigate("/blogs")
                 setError('');
 
             } else {

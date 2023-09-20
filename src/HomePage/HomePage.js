@@ -34,6 +34,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const HomePage = () => {
 
   const [Result, setResults] = React.useState([]);
+  const [todos, setTodos] = React.useState([]);
 
   const API1 = `http://43.205.145.16:4000/api/public_announcement`
 
@@ -52,6 +53,34 @@ const HomePage = () => {
   React.useEffect(() => {
     fetchData1();
   }, [fetchData1]);
+
+
+  React.useEffect(() => {
+    // Define the API endpoint URL
+    const apiUrl = 'http://localhost:4000/blog/getAllTodo';
+
+    // Create an async function to fetch todos
+    async function fetchTodos() {
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setTodos(data.todos.reverse()); // Assuming the response contains an array of todos
+        } catch (error) {
+            console.error('Error fetching todos:', error);
+        }
+    }
+
+    // Call the async function
+    fetchTodos();
+}, []); // The empty dependency array means this effect runs once after the initial render
+
+const resolveImageUrl = (relativeUrl) => {
+    const baseUrl = 'http://localhost:4000/'; // Replace with your server's base URL
+    return `${baseUrl}${relativeUrl}`;
+};
 
   return (
     <>
@@ -298,37 +327,26 @@ const HomePage = () => {
             <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon /></Link><Link to="#"><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <Item className='service-item shadow-remove'>
-                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                <div className="content-box">
-                  <h3>Post 1</h3>
-                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Item className='service-item shadow-remove'>
-                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                <div className="content-box">
-                  <h3>Post 2</h3>
-                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Item className='service-item shadow-remove'>
-                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                <div className="content-box">
-                  <h3>Post 3</h3>
-                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </div>
-              </Item>
-            </Grid>
-          </Grid>
+                                {todos.map((item, index) => (
+                                    <Grid item xs={12} md={4} key={item.id || index}>
+                                        <Item className='service-item shadow-remove'>
+                                            <div className="post-img">
+                                                <img src={resolveImageUrl(item.image)} alt="banner" />
+                                            </div>
+                                            <div className="content-box">
+                                                <h3>{item.title}</h3>
+                                                <p className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                                                <div className='more-text subscribe-btn'>
+                                                    <Link to={`/postdetails/${item.id}/${item.title}`} className='blue-btn'>
+                                                        Read More
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </Item>
+                                    </Grid>
+                                ))}
+
+                            </Grid>
         </div>
       </div>
     </>

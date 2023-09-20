@@ -31,6 +31,7 @@ import Liquidator from "./services/Liquidator";
 import Highlights from "./blog/Highlights";
 import Blogs from "./blog/Blogs";
 import PostDetails from "./blog/PostDetails";
+import EditBlog from "./blog/EditBlog";
 
 const myAllroute = [
   { path: "/", element: <HomePage /> },
@@ -62,7 +63,8 @@ const myAllroute = [
   { path: "/liquidator", element: <Liquidator /> },
   { path: "/blogs", element: <Blogs /> },
   { path: "/highlights", element: <Highlights /> },
-  { path: "/postdetails", element: <PostDetails /> },
+  { path: "/postdetails/:id/:dynamicurl", element: <PostDetails /> },
+  { path: "/editBlog/:id", element: <EditBlog /> },
 ]
 
 function App() {
