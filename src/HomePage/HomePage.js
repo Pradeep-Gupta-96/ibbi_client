@@ -57,30 +57,30 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // Define the API endpoint URL
-    const apiUrl = 'http://localhost:4000/blog/getAllTodo';
+    const apiUrl = 'http://43.205.145.16:4000/blog/getAllTodo';
 
     // Create an async function to fetch todos
     async function fetchTodos() {
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setTodos(data.todos.reverse()); // Assuming the response contains an array of todos
-        } catch (error) {
-            console.error('Error fetching todos:', error);
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+        const data = await response.json();
+        setTodos(data.todos.reverse()); // Assuming the response contains an array of todos
+      } catch (error) {
+        console.error('Error fetching todos:', error);
+      }
     }
 
     // Call the async function
     fetchTodos();
-}, []); // The empty dependency array means this effect runs once after the initial render
+  }, []); // The empty dependency array means this effect runs once after the initial render
 
-const resolveImageUrl = (relativeUrl) => {
-    const baseUrl = 'http://localhost:4000/'; // Replace with your server's base URL
+  const resolveImageUrl = (relativeUrl) => {
+    const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
     return `${baseUrl}${relativeUrl}`;
-};
+  };
 
   return (
     <>
@@ -327,26 +327,26 @@ const resolveImageUrl = (relativeUrl) => {
             <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon /></Link><Link to="#"><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-                                {todos.map((item, index) => (
-                                    <Grid item xs={12} md={4} key={item.id || index}>
-                                        <Item className='service-item shadow-remove'>
-                                            <div className="post-img">
-                                                <img src={resolveImageUrl(item.image)} alt="banner" />
-                                            </div>
-                                            <div className="content-box">
-                                                <h3>{item.title}</h3>
-                                                <p className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></p>
-                                                <div className='more-text subscribe-btn'>
-                                                    <Link to={`/postdetails/${item.id}/${item.title}`} className='blue-btn'>
-                                                        Read More
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </Item>
-                                    </Grid>
-                                ))}
+            {todos.map((item, index) => (
+              <Grid item xs={12} md={4} key={item.id || index}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img">
+                    <img src={resolveImageUrl(item.image)} alt="banner" />
+                  </div>
+                  <div className="content-box">
+                    <h3>{item.title}</h3>
+                    <p className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                    <div className='more-text subscribe-btn'>
+                      <Link to={`/postdetails/${item.id}/${item.title}`} className='blue-btn'>
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
+                </Item>
+              </Grid>
+            ))}
 
-                            </Grid>
+          </Grid>
         </div>
       </div>
     </>
