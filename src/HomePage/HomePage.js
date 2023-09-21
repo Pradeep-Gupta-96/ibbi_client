@@ -35,6 +35,7 @@ const HomePage = () => {
 
   const [Result, setResults] = React.useState([]);
   const [todos, setTodos] = React.useState([]);
+  const [startIndex, setStartIndex]= React.useState(0);
 
   const API1 = `http://43.205.145.16:4000/api/public_announcement`
 
@@ -81,6 +82,22 @@ const HomePage = () => {
     const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
     return `${baseUrl}${relativeUrl}`;
   };
+
+
+
+  const showNextThree = () => {
+    if (startIndex + 3 < todos.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const showPreviousThree = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  const visibleTodos = todos.slice(startIndex, startIndex + 3);
 
   return (
     <>
@@ -324,11 +341,11 @@ const HomePage = () => {
         <div className="bound">
           <div className="title-sec mb-30">
             <h3 className="comman-title">Blog Post</h3>
-            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon /></Link><Link to="#"><KeyboardArrowRightIcon /></Link></div>
+            <div className="np-aero"><Link to="#" onClick={showNextThree}><KeyboardArrowLeftIcon /></Link><Link to="#" onClick={showPreviousThree}><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-            {todos.map((item, index) => (
-              <Grid item xs={12} md={4} key={item.id || index}>
+            {visibleTodos.map((item) => (
+              <Grid item xs={12} md={4} key={item.id}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img">
                     <img src={resolveImageUrl(item.image)} alt="banner" />
@@ -345,7 +362,6 @@ const HomePage = () => {
                 </Item>
               </Grid>
             ))}
-
           </Grid>
         </div>
       </div>
