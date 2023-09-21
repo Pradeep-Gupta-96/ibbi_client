@@ -48,7 +48,7 @@ const Navbar = () => {
                     <li><Link to="/financial-creditor">For Financial Creditor</Link></li>
                     <li><Link to="/operational-creditor">For Operational Creditor</Link></li>
                     <li><Link to="/resolution-applicant">For Resolution Applicant</Link></li>
-                    <li><Link to="/resolution-professional">For Resolution Professional / Interim Resolution Professional</Link></li>
+                    <li><Link to="/resolution-professional">For Insolvency Professional (IRP/RP)</Link></li>
                     <li><Link to="/liquidator">For Liquidator</Link></li>
                   </ul>
                 </li>
