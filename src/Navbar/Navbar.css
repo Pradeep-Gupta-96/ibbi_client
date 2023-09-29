@@ -71,8 +71,15 @@ li.nav-item.get-free a:hover {background: #fff;color: #528fcb;}
 .page-content p {text-align: justify;line-height: 24px;}
 img.alignright {float: right;margin: 5px 0 20px 20px;}
 .page-banner {width: 100%;}
-.add-post-sec {background: #fff;padding: 8px;border-radius: 4px;margin-bottom: 20px;}
+.add-post-sec {background: #fff;padding:15px;border-radius: 4px;margin-bottom: 20px;}
 .add-post-sec h3 {padding-left: 10px;}
+.blog-edit-sec .subscribe-btn {display: flex; justify-content: center;}
+.blog-edit-sec .subscribe-btn a.blue-btn {display: flex;margin: 0px 5px;}
+.post-img img {width: 100%;}
+.post-details {padding-top: 30px;}
+.post-details p {padding-top: 0px; margin-top: 0px;} 
+.blog-sec .post-img {max-height: 200px;overflow: hidden;}
+.blog-sec .content-box p.ab-text {-webkit-line-clamp: 3;display: -webkit-box;-webkit-box-orient: vertical; white-space: normal;overflow: hidden;}
 
 @media (max-width: 767px) {
     .bound {padding: 0px 15px;box-sizing: border-box;}

@@ -265,7 +265,7 @@ const Blogs = () => {
                                 </Box>
                             </div> : ""}
 
-                            <Grid className="services-items" container spacing={2}>
+                            <Grid className="services-items blog-edit-sec" container spacing={2}>
                                 {todos.map((item, index) => (
                                     <Grid item xs={12} md={4} key={item.id || index}>
                                         <Item className='service-item shadow-remove'>
@@ -279,17 +279,18 @@ const Blogs = () => {
                                                     <Link to={`/postdetails/${item.id}/${item.title}`} className='blue-btn'>
                                                         Read More
                                                     </Link>
+                                                    {localStorage.getItem("token") && (
+                                                        <>
+                                                            <Link to={`/editBlog/${item.id}`} className='blue-btn'>
+                                                                <EditIcon />
+                                                            </Link>
+                                                            <Link onClick={()=>handleForDelete(item.id)} className='blue-btn'>
+                                                                <DeleteForeverTwoToneIcon />
+                                                            </Link>
+                                                        </>
+                                                    )}
                                                 </div>
-                                                {localStorage.getItem("token") && (
-                                                    <>
-                                                        <Link to={`/editBlog/${item.id}`} className='blue-btn'>
-                                                            <EditIcon />
-                                                        </Link>
-                                                        <Link onClick={()=>handleForDelete(item.id)} className='blue-btn'>
-                                                            <DeleteForeverTwoToneIcon />
-                                                        </Link>
-                                                    </>
-                                                )}
+                                                
                                             </div>
                                         </Item>
                                     </Grid>

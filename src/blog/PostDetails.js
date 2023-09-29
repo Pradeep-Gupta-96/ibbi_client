@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import Grid from '@mui/material/Grid';
 
 const PostDetails = () => {
 
@@ -49,8 +50,15 @@ const PostDetails = () => {
             </div>
             <div className="page-content pb-40">
                 <div className="bound">
-                    <p><img src={resolveImageUrl(image)} alt="banner" /></p>
-                    <p className='ab-text' dangerouslySetInnerHTML={{ __html: description }}></p>
+                    <Grid className="post-details" container spacing={4}>
+                        <Grid className="post-img" item xs={12} md={6} sm={6}>
+                            <img src={resolveImageUrl(image)} alt="banner" />
+                        </Grid>
+                        <Grid className="post-data" item xs={12} md={6} sm={6}>
+                            <p className='ab-text' dangerouslySetInnerHTML={{ __html: description }}></p>
+                        </Grid>
+                    </Grid>
+                    
                 </div>
             </div>
         </>

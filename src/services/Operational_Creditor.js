@@ -24,29 +24,29 @@ const Operational_Creditor = () => {
             <div className="page-content pb-40">
                 <div className="bound">
                     <p><img className='page-banner' src={operationalcreditor} alt="banner" /></p>
-                    <p>An operational creditor is a person to whom ‘operational debt’ is owed, in order to classify as an operational debt the amount should fall under the ambit of 'claim' as defined under section 3 (6) of the Code and such a claim should confine within the definition of debt under the section 3 (11) of the Code and such a debt should confine under the 4 categories laid down by the section 5 (21) of the code which are: </p>
-                    <p>Goods, Services, Employment, Government. </p>
-                    <p>Our dedicated team specializes in providing comprehensive legal services to operational creditors involved in the Corporate Insolvency Resolution Process (CIRP) under the Insolvency and Bankruptcy Code (IBC) of 2016. Here's an overview of the services we offer: </p>
+                    <p>An operational creditor is a person to whom ‘operational debt’ is owed, in order to classify as an operational debt the amount should fall under the ambit of 'claim' as defined under section 3 (6) of the Insolvency and Bankruptcy Code, (IBC) 2016 and such a claim should confine within the definition of debt under the section 3 (11) of the Code and such a debt should confine under the 4 categories laid down by the section 5 (21) of the Insolvency and Bankruptcy Code, (IBC) 2016 which are:</p>
+                    <p>Goods, Services, Employment, Government.</p>
+                    <p><em>At IBC Support, we recognize the critical role that Operational Creditors play in the resolution of distressed companies, and our mission is to empower you with the expertise and support needed to navigate this multifaceted landscape effectively. In a dynamic financial environment, safeguarding your rights, optimizing recoveries, and ensuring compliance with the IBC's rigorous regulations are paramount. Our platform is here to serve as your trusted partner throughout this crucial journey.</em></p>
+                    <p>Our dedicated team specializes in providing comprehensive legal services to operational creditors involved in the Corporate Insolvency Resolution Process (CIRP) under the Insolvency and Bankruptcy Code (IBC) of 2016. Here's an overview of the services we offer:</p>
                     <div className='services-sec'>
                         <Grid className="services-items" container spacing={2}>
                             <Grid item xs={12} md={4} sm={4}>
                                 <Item className='service-item'>
-                                    <h3>Initiation & Filing of Section 9 Application under IBC, 2016</h3>
-                                    <p className='ab-text'>We assist operational creditors in initiating insolvency proceedings by preparing and filing Section 9 applications with the National Company Law Tribunal (NCLT), a crucial step in the CIRP. </p>
-                                    
+                                    <h3>Initiation & Filing of Section 9 Application under the Insolvency and Bankruptcy Code, (IBC) 2016 </h3>
+                                    <p className='ab-text'>We assist operational creditors in initiating insolvency proceedings by preparing and filing Section 9 applications with the National Company Law Tribunal (NCLT), a crucial step in the CIRP.</p>                                    
                                 </Item>
                             </Grid>
                             <Grid item xs={12} md={4} sm={4}>
                                 <Item className='service-item'>
                                     <h3>Assisting in Claims Submission</h3>
-                                    <p className='ab-text'>Our team guides operational creditors through the process of preparing and submitting their claims to the Insolvency Resolution Professional (IRP) or the resolution professional, ensuring accuracy and compliance. </p>
+                                    <p className='ab-text'>Our team guides operational creditors through the process of preparing and submitting their claims to the Insolvency Resolution Professional (IRP) or the resolution professional, ensuring accuracy and compliance.</p>
                                     
                                 </Item>
                             </Grid>
                             <Grid item xs={12} md={4} sm={4}>
                                 <Item className='service-item'>
                                     <h3>Representation before CoC (Committee of Creditors)</h3>
-                                    <p className='ab-text'>We represent operational creditors in CoC meetings, advocating for their rights and interests, and participating in critical decisions concerning the resolution process. </p>
+                                    <p className='ab-text'>We represent operational creditors in CoC meetings, advocating for their rights and interests, and participating in critical decisions concerning the resolution process.</p>
                                     
                                 </Item>
                             </Grid>
@@ -60,14 +60,14 @@ const Operational_Creditor = () => {
                             <Grid item xs={12} md={4} sm={4}>
                                 <Item className='service-item'>
                                     <h3>Legal Representation Before Various Courts and Adjudicating Authority</h3>
-                                    <p className='ab-text'>Our legal team provides representation before diverse courts and adjudicating authorities, including appearances before the NCLT and other relevant bodies, to protect the interests of operational creditors. </p>
+                                    <p className='ab-text'>Our legal team provides representation before diverse courts and adjudicating authorities, including appearances before the National Company Law Tribunal (NCLT) and other relevant bodies, to protect the interests of operational creditors.</p>
                                     
                                 </Item>
                             </Grid>
                             <Grid item xs={12} md={4} sm={4}>
                                 <Item className='service-item'>
                                     <h3>Litigation Support</h3>
-                                    <p className='ab-text'>We extend full litigation support, assisting operational creditors in navigating legal disputes that may arise during the insolvency process, including disputes over claim admission, rejections, and other contentious issues. </p>
+                                    <p className='ab-text'>We extend full litigation support, assisting operational creditors in navigating legal disputes that may arise during the insolvency process, including disputes over claim admission, rejections, and other contentious issues.</p>
                                     
                                 </Item>
                             </Grid>
