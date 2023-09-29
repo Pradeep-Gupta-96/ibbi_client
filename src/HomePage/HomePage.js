@@ -165,34 +165,28 @@ const HomePage = () => {
               </Item>
             </Grid>
 
-            <Grid className='btn-sec' item xs={12} md={6}>
+            {/* <Grid className='btn-sec' item xs={12} md={6}>
               <Item className='shadow-remove'>
                 <div className="btn-area">
                   <Link className='quick-link-btn green-btn' target="_blank" to="#">Grievances / Complaints Login </Link>
                   <Link className='quick-link-btn green-btn' target="_blank" to="#"> IP/RV Login   </Link>
                 </div>
               </Item>
-            </Grid>
+            </Grid> */}
           </Grid>
           <Grid className="link-sec" container spacing={2}>
             <Grid item xs={12} md={8}>
               <Item className='shadow-remove section-box'>
                 <div className="boxse">
                   <ul>
-                    <li><div className="box-outer">
-                      <Link to="/en/tender"><div className="box-inr"><div className="icon-color-b"><img src={workshop} alt="banner" /></div><span>
-                        Tender
-                      </span></div></Link></div></li>
-                    <li><div className="box-outer"><Link to="/en/stakeholders"><div className="box-inr"><div className="icon-color-b"> <img src={activities} alt="banner" /></div> <span>Other <br />Stakeholders</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link target="_blank" to="/en/faqs"><div className="box-inr"><div className="icon-color-b"><img src={career} alt="banner" /></div><span>FAQs</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link target="_blank" to="/en/home/activities"><div className="box-inr"><div className="icon-color-b"><img src={downloadform} alt="banner" /></div><span>Engagement with<br /> Academia</span></div></Link></div></li>
-
-                    <li><div className="box-outer"><Link target="_blank" to="/en/home/career"><div className="box-inr"><div className="icon-color-b"><img src={faqs} alt="banner" /></div><span>Career</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link target="_blank" to="/en/home/rti"><div className="box-inr"><div className="icon-color-b"><img src={RTI} alt="banner" /></div><span>Right to Information</span></div></Link></div></li>
-                    <li><div className="box-outer"><Link to="/en/home/downloads"><div className="box-inr"><div className="icon-color-b"><img src={stakeholders} alt="banner" /></div><span>Downloads</span></div></Link></div></li>
-
-
-                    <li><div className="box-outer"><Link to="/en/workshop"><div className="box-inr"><div className="icon-color-b"><img src={TENDER} alt="banner" /></div><span>IP Workshop</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/tender"><div className="box-inr"><div className="icon-color-b"><img src={workshop} alt="banner" /></div><span>Recent Updates & News</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/stakeholders"><div className="box-inr"><div className="icon-color-b"> <img src={activities} alt="banner" /></div> <span>Resource Centre</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/faqs"><div className="box-inr"><div className="icon-color-b"><img src={career} alt="banner" /></div><span>Our Services</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/home/activities"><div className="box-inr"><div className="icon-color-b"><img src={downloadform} alt="banner" /></div><span>Download Forms</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/home/career"><div className="box-inr"><div className="icon-color-b"><img src={faqs} alt="banner" /></div><span>Frequently Asked Questions</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link target="_blank" to="/en/home/rti"><div className="box-inr"><div className="icon-color-b"><img src={RTI} alt="banner" /></div><span>Important Links</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/home/downloads"><div className="box-inr"><div className="icon-color-b"><img src={stakeholders} alt="banner" /></div><span>IBC Forum</span></div></Link></div></li>
+                    <li><div className="box-outer"><Link to="/en/workshop"><div className="box-inr"><div className="icon-color-b"><img src={TENDER} alt="banner" /></div><span>Landmark Cases</span></div></Link></div></li>
                   </ul>
                 </div>
 
@@ -203,10 +197,10 @@ const HomePage = () => {
             <Grid className='btn-sec' item xs={12} md={4}>
               <Item className='shadow-remove'>
                 <div className="button_st">
-                  <Link className='green-btn' to="#" target="_blank"><span>Intimation of Application</span></Link>
-                  <Link className='green-btn' to="#" target="_blank"><span>Corporate Processes</span></Link>
-                  <Link className='green-btn' to="#" target="_blank"><span>IP Corner</span></Link>
-                  <Link className='green-btn' to="#" target="_blank"><span>Employee Corner</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Assistance in Claim Submission</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Filing of progress reports</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Recovery of Dues</span></Link>
+                  <Link className='green-btn' to="#" target="_blank"><span>Preparation of Resolution Plan</span></Link>
                 </div>
               </Item>
             </Grid>
@@ -341,18 +335,18 @@ const HomePage = () => {
         <div className="bound">
           <div className="title-sec mb-30">
             <h3 className="comman-title">Blog Post</h3>
-            <div className="np-aero"><Link to="#" onClick={showNextThree}><KeyboardArrowLeftIcon /></Link><Link to="#" onClick={showPreviousThree}><KeyboardArrowRightIcon /></Link></div>
+            <div className="np-aero"><Link to="#" onClick={showPreviousThree}><KeyboardArrowLeftIcon /></Link><Link to="#" onClick={showNextThree}><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
             {visibleTodos.map((item) => (
-              <Grid item xs={12} md={4} key={item.id}>
+              <Grid className='s-item' item xs={12} md={4} key={item.id}>
                 <Item className='service-item shadow-remove'>
                   <div className="post-img">
                     <img src={resolveImageUrl(item.image)} alt="banner" />
                   </div>
                   <div className="content-box">
                     <h3>{item.title}</h3>
-                    <p className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                    <div className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></div>
                     <div className='more-text subscribe-btn'>
                       <Link to={`/postdetails/${item.id}/${item.title}`} className='blue-btn'>
                         Read More

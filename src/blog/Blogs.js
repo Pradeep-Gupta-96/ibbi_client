@@ -22,36 +22,7 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-const ListItemCSS = {
-    display: 'block', cursor: "pointer",
-    width: "100px",
-    height: "100px",
-    borderRadius: "100%",
-    boxShadow: "0 0 0 10px #eceff1",
-    background: "#eceff1"
-}
 
-const styles = {
-    fileInput: {
-        display: 'none', // hide the default input element
-    },
-    label: {
-        display: 'block',
-        width: '100px',
-        height: '100px',
-        borderRadius: '50%',
-        boxShadow: '0 0 0 10px #eceff1',
-        cursor: 'pointer',
-        overflow: 'hidden',
-    },
-    labelText: {
-        display: 'block',
-        textAlign: 'center',
-        marginTop: '45px',
-        fontSize: '14px',
-        color: '#777',
-    },
-};
 
 const Blogs = () => {
 
@@ -206,64 +177,64 @@ const Blogs = () => {
                 <div className="bound">
                     <div className='blog-sec highlights-sec padding-50'>
                         <div className="bound">
+                        {localStorage.getItem("token") ? <div className="add-post-sec">
+            
 
-                            {localStorage.getItem("token") ? <div className="add-post-sec">
-                                <h3>Add new post</h3>
-                                <Button onClick={logout}>Logout</Button>
+                                <h3><span>Add new post</span> <Button onClick={logout}>Logout</Button></h3>
                                 <Box component="form"
-                                    sx={{
-                                        '& .MuiTextField-root': { m: '1%', width: '48%' }, '& .MuiTextField-root:last-child': { m: '1%', width: '98%' },
-                                    }}
                                     noValidate
                                     onSubmit={handleSubmit}
 
                                 >
                                     <Grid container spacing={2}>
-                                        <Grid item xs={12} sm={6}>
-                                            <label style={styles.label}>
+                                        <Grid item xs={12} sm={12}>
+                                            <label>
                                                 {avatarImage ? (
-                                                    <Avatar sx={ListItemCSS} src={avatarImage} />
+                                                    <Avatar className='post-imgg' src={avatarImage} />
                                                 ) : (
                                                     <>
-                                                        <TextField
-                                                            required
-                                                            id="outlined-required"
-                                                            type='file'
-                                                            style={styles.fileInput}
-                                                            onChange={handleAvatarChange}
-                                                            accept="image/*"
-                                                        />
-                                                        <Typography variant="body2" component="span" style={styles.labelText}>
-                                                            IMAGE
-                                                        </Typography>
+                                                    <Typography sx={{marginBottom:"15px"}} variant="body2" component="span">Post Image </Typography>
+                                                    <TextField
+                                                        required
+                                                        id="outlined-required"
+                                                        type='file'
+                                                        fullWidth
+                                                        sx={{marginBottom:"15px"}}
+                                                        onChange={handleAvatarChange}
+                                                        accept="image/*"
+                                                    />
+                                                        
                                                     </>
                                                 )}
                                             </label>
-                                        </Grid>
-                                        <Grid item xs={12} sm={6} md={3}> </Grid>
-                                        <Grid item xs={12} sm={6}>
                                             <TextField
                                                 required
                                                 id="outlined-required"
                                                 label="Post Title"
                                                 name='Post_Title'
+                                                fullWidth
+                                                sx={{marginBottom:"15px"}}
                                                 onChange={handleOnChange}
                                                 value={Title.Post_Title}
                                             />
+                                            <CKEditor
+                                                editor={ClassicEditor}
+                                                required
+                                                className="ck-edit"
+                                                data="<p>Text here...</p>"
+                                                onChange={(event, editor) => {
+                                                    const data = editor.getData();
+                                                    setDiscription(data)
+                                                }}
+                                            />
+                                            <Button sx={{marginTop:"15px"}} className='blue-btn' type="submit" variant="contained" > POST </Button>
                                         </Grid>
-                                        <CKEditor
-                                            editor={ClassicEditor}
-                                            required
-                                            data="<p>Text here...</p>"
-                                            onChange={(event, editor) => {
-                                                const data = editor.getData();
-                                                setDiscription(data)
-                                            }}
-                                        />
-                                        <Button className='submit-btn' type="submit" variant="contained" > POST </Button>
+                                        
                                     </Grid>
                                 </Box>
                             </div> : ""}
+                         
+                            
 
                             <Grid className="services-items blog-edit-sec" container spacing={2}>
                                 {todos.map((item, index) => (
@@ -274,7 +245,7 @@ const Blogs = () => {
                                             </div>
                                             <div className="content-box">
                                                 <h3>{item.title}</h3>
-                                                <p className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                                                <div className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></div>
                                                 <div className='more-text subscribe-btn'>
                                                     <Link to={`/postdetails/${item.id}/${item.title}`} className='blue-btn'>
                                                         Read More
