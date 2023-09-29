@@ -35,7 +35,7 @@ const HomePage = () => {
 
   const [Result, setResults] = React.useState([]);
   const [todos, setTodos] = React.useState([]);
-  const [startIndex, setStartIndex]= React.useState(0);
+  const [startIndex, setStartIndex] = React.useState(0);
 
   const API1 = `http://43.205.145.16:4000/api/public_announcement`
 
@@ -139,10 +139,6 @@ const HomePage = () => {
                     <Link className='more-cont' to="/announcement">Show More...</Link>
                   </Paper>
                 </div>
-
-
-
-
               </Item>
             </Grid>
 

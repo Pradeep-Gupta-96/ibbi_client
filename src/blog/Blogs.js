@@ -285,7 +285,7 @@ const Blogs = () => {
                                                         <Link to={`/editBlog/${item.id}`} className='blue-btn'>
                                                             <EditIcon />
                                                         </Link>
-                                                        <Link onClick={()=>handleForDelete(item.id)} className='blue-btn'>
+                                                        <Link onClick={() => handleForDelete(item.id)} className='blue-btn'>
                                                             <DeleteForeverTwoToneIcon />
                                                         </Link>
                                                     </>
