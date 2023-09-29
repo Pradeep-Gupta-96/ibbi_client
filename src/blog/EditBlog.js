@@ -140,6 +140,7 @@ const EditBlog = () => {
                 </div>
             </div>
             <div className="page-content pb-40">
+                <div className="bound">
                 {localStorage.getItem("token") ? <div className="add-post-sec">
                     <h3>Update Post</h3>
                     <Box component="form"
@@ -216,6 +217,7 @@ const EditBlog = () => {
                         </Grid>
                     </Box>
                 </div> : ""}
+                </div>
             </div>
         </>
     )
