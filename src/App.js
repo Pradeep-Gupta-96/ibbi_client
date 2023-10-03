@@ -28,10 +28,15 @@ import OperationalCreditor from "./services/Operational_Creditor";
 import ResolutionApplicant from "./services/Resolution_Applicant";
 import ResolutionProfessional from "./services/Resolution_Professional";
 import Liquidator from "./services/Liquidator";
-import Highlights from "./blog/Highlights";
 import Blogs from "./blog/Blogs";
 import PostDetails from "./blog/PostDetails";
 import EditBlog from "./blog/EditBlog";
+import Highlights from "./Highlights/Highlights";
+import EditHighlights from "./Highlights/EditHighlights";
+import HighlightsDetails from "./Highlights/HighlightsDetails";
+import Testimonial from "./Testimonials/Testimonial";
+import Edittestimonials from "./Testimonials/Edittestimonials";
+import TestimonialsDetails from "./Testimonials/TestimonialsDetails";
 
 const myAllroute = [
   { path: "/", element: <HomePage /> },
@@ -62,9 +67,14 @@ const myAllroute = [
   { path: "/resolution-professional", element: <ResolutionProfessional /> },
   { path: "/liquidator", element: <Liquidator /> },
   { path: "/blogs", element: <Blogs /> },
-  { path: "/highlights", element: <Highlights /> },
   { path: "/postdetails/:id/:dynamicurl", element: <PostDetails /> },
   { path: "/editBlog/:id", element: <EditBlog /> },
+  { path: "/highlights", element: <Highlights /> },
+  { path: "/editHighlights/:id", element: <EditHighlights /> },
+  { path: "/highlightsDetails/:id/:dynamicurl", element: <HighlightsDetails /> },
+  { path: "/testimonial", element: <Testimonial /> },
+  { path: "/edittestimonials/:id", element: <Edittestimonials /> },
+  { path: "/testimonialsdetails/:id/:dynamicurl", element: <TestimonialsDetails /> },
 ]
 
 function App() {

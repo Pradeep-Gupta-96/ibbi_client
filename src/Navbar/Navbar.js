@@ -75,10 +75,10 @@ const Navbar = () => {
                     <li><Link to="/viewdeatils">Whats New</Link></li>
                   </ul>
                 </li>
-                <li className="nav-item"><Link className="nav-Link" to="/blogs">Blog</Link>
+                <li className="nav-item parent"><Link className="nav-Link" to="/blogs">Blog</Link>
                 <ul>
-                    <li><Link to="/#">Highlights</Link></li>
-                    <li><Link to="/#">Testimonials</Link></li>
+                    <li><Link to="/highlights">Highlights</Link></li>
+                    <li><Link to="/testimonial">Testimonials</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="/contact-us">Contacts</Link></li>

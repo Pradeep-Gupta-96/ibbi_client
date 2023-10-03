@@ -35,6 +35,8 @@ const HomePage = () => {
 
   const [Result, setResults] = React.useState([]);
   const [todos, setTodos] = React.useState([]);
+  const [highlights, sethighlights] = React.useState([]);
+  const [testimonials, settestimonials] = React.useState([]);
   const [startIndex, setStartIndex] = React.useState(0);
 
   const API1 = `http://43.205.145.16:4000/api/public_announcement`
@@ -78,12 +80,6 @@ const HomePage = () => {
     fetchTodos();
   }, []); // The empty dependency array means this effect runs once after the initial render
 
-  const resolveImageUrl = (relativeUrl) => {
-    const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
-    return `${baseUrl}${relativeUrl}`;
-  };
-
-
 
   const showNextThree = () => {
     if (startIndex + 3 < todos.length) {
@@ -98,6 +94,89 @@ const HomePage = () => {
   };
 
   const visibleTodos = todos.slice(startIndex, startIndex + 3);
+
+  React.useEffect(() => {
+    // Define the API endpoint URL
+    const apiUrl = 'http://localhost:4000/highlights/getAllhighlights';
+
+    // Create an async function to fetch highlights
+    async function fetchhighlights() {
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        sethighlights(data.highlights.reverse()); // Assuming the response contains an array of highlights
+      } catch (error) {
+        console.error('Error fetching highlights:', error);
+      }
+    }
+
+    // Call the async function
+    fetchhighlights();
+  }, []); // The empty dependency array means this effect runs once after the initial render
+
+
+
+  const showNextThreehighlights = () => {
+    if (startIndex + 3 < highlights.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const showPreviousThreehighlights = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  const visiblehighlights = highlights.slice(startIndex, startIndex + 3);
+
+  React.useEffect(() => {
+    // Define the API endpoint URL
+    const apiUrl = 'http://localhost:4000/testimonials/getAlltestimonials';
+
+    // Create an async function to fetch testimonials
+    async function fetchtestimonials() {
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        settestimonials(data.testimonials.reverse()); // Assuming the response contains an array of testimonials
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      }
+    }
+
+    // Call the async function
+    fetchtestimonials();
+  }, []); // The empty dependency array means this effect runs once after the initial render
+
+
+
+  const showNextThreetestimonials = () => {
+    if (startIndex + 3 < testimonials.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const showPreviousThreetestimonials = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  const visibletestimonials = testimonials.slice(startIndex, startIndex + 3);
+
+  const resolveImageUrl = (relativeUrl) => {
+    const baseUrl = 'http://localhost:4000/'; // Replace with your server's base URL
+    return `${baseUrl}${relativeUrl}`;
+  };
+
+
 
   return (
     <>
@@ -253,77 +332,52 @@ const HomePage = () => {
           </Grid>
         </div>
       </div>
-      <div className='highlights-sec gray-bg padding-50'>
+      <div className='blog-sec highlights-sec blue-bg padding-50'>
         <div className="bound">
           <div className="title-sec mb-30">
             <h3 className="comman-title">Highlights</h3>
-            <div className="np-aero"><Link to="#"><KeyboardArrowLeftIcon /></Link><Link to="#"><KeyboardArrowRightIcon /></Link></div>
+            <div className="np-aero"><Link to="#" onClick={showPreviousThreehighlights}><KeyboardArrowLeftIcon /></Link><Link to="#" onClick={showNextThreehighlights}><KeyboardArrowRightIcon /></Link></div>
           </div>
           <Grid className="services-items" container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <Item className='service-item shadow-remove'>
-                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                <div className="content-box">
-                  <h3>Highlights 1</h3>
-                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Item className='service-item shadow-remove'>
-                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                <div className="content-box">
-                  <h3>Highlights 2</h3>
-                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Item className='service-item shadow-remove'>
-                <div className="post-img"><img src={aboutimg} alt="banner" /></div>
-                <div className="content-box">
-                  <h3>Highlights 3</h3>
-                  <p className='ab-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
-                  <div className='more-text subscribe-btn'><Link to="#" className='blue-btn'>Read More </Link></div>
-                </div>
-              </Item>
-            </Grid>
+            {visiblehighlights.map((item) => (
+              <Grid className='s-item' item xs={12} md={4} key={item.id}>
+                <Item className='service-item shadow-remove'>
+                  <div className="post-img">
+                    <img src={resolveImageUrl(item.image)} alt="banner" />
+                  </div>
+                  <div className="content-box">
+                    <h3>{item.title}</h3>
+                    <div className='ab-text' dangerouslySetInnerHTML={{ __html: item.description }}></div>
+                    <div className='more-text subscribe-btn'>
+                      <Link to={`/highlightsDetails/${item.id}/${item.title}`} className='blue-btn'>
+                        Read More
+                      </Link>
+                    </div>
+                  </div>
+                </Item>
+              </Grid>
+            ))}
           </Grid>
         </div>
       </div>
       <div className='testmonial-sec padding-50'>
         <div className="bound">
-          <h3 className="comman-title mb-30">Testimonials</h3>
+          <div className="title-sec mb-30">
+            <h3 className="comman-title">Testmonial</h3>
+            <div className="np-aero"><Link to="#" onClick={showPreviousThreetestimonials}><KeyboardArrowLeftIcon /></Link><Link to="#" onClick={showNextThreetestimonials}><KeyboardArrowRightIcon /></Link></div>
+          </div>
           <Grid className="tm-items" container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <Item className='tme-item'>
-                <div className="content-box">
-                  <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
-                  <p className='tm-text'><i>IBC Support Forum's professionalism and commitment to our success were remarkable. They provided clear and effective solutions that helped us recover debts we thought were lost forever. We're extremely grateful for their support.</i></p>
-                  <div className="authar-name"><img src={nophoto} alt="User Icon" /><strong>Jay Patel</strong><br />Designation</div>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Item className='tme-item'>
-                <div className="content-box">
-                  <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
-                  <p className='tm-text'><i>Working with IBC Support Forum was a wise decision for our organization. Their expertise in IBC matters is unmatched, and their dedication to helping us achieve the best outcomes was evident throughout our partnership. They are true experts in their field.</i></p>
-                  <div className="authar-name"><img src={nophoto} alt="User Icon" /><strong>Sophia</strong><br />Designation</div>
-                </div>
-              </Item>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Item className='tme-item'>
-                <div className="content-box">
-                  <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
-                  <p className='tm-text'><i>Working with IBC Support Forum was a breath of fresh air. Their commitment to excellence and in-depth knowledge of IBC matters shone through in every interaction. They delivered results that exceeded our expectations.</i></p>
-                  <div className="authar-name"><img src={nophoto} alt="User Icon" /><strong>David</strong><br />Designation</div>
-                </div>
-              </Item>
-            </Grid>
+            {visibletestimonials.map((item) => (
+              <Grid item xs={12} md={4}>
+                <Item className='tme-item'>
+                  <div className="content-box">
+                    <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
+                    <p className='tm-text'><i dangerouslySetInnerHTML={{ __html: item.description }}></i></p>
+                    <div className="authar-name"><img src={resolveImageUrl(item.image)} alt="banner" /><strong><h3>{item.title}</h3></strong><br />Designation</div>
+                  </div>
+                </Item>
+              </Grid>
+            ))}
           </Grid>
         </div>
       </div>
