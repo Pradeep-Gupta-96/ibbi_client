@@ -14,7 +14,7 @@ const PostDetails = () => {
 
     useEffect(() => {
         // Define the API endpoint URL
-        const apiUrl = `http://43.205.145.16:4000/blog/getTodoById/${id}`;
+        const apiUrl = `http://43.205.145.146:4000/blog/getTodoById/${id}`;
 
         // Create an async function to fetch todos
         async function fetchTodos() {
@@ -37,7 +37,7 @@ const PostDetails = () => {
     }, [id]); // The empty dependency array means this effect runs once after the initial render
 
     const resolveImageUrl = (relativeUrl) => {
-        const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
+        const baseUrl = 'http://43.205.145.146:4000/'; // Replace with your server's base URL
         return `${baseUrl}${relativeUrl}`;
     };
 

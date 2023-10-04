@@ -29,7 +29,7 @@ const AuctionNotices = () => {
     };
 
 
-    const API1 = `http://43.205.145.16:4000/api/auction_notices`
+    const API1 = `http://43.205.145.146:4000/api/auction_notices`
 
     const fetchData1 =React.useCallback( async (page) => {
         try {

@@ -53,7 +53,7 @@ const EditBlog = () => {
 
 
     useEffect(() => {
-        const apiUrl = `http://43.205.145.16:4000/blog/getTodoById/${id}`;
+        const apiUrl = `http://43.205.145.146:4000/blog/getTodoById/${id}`;
 
         async function fetchTodo() {
             try {
@@ -97,7 +97,7 @@ const EditBlog = () => {
             formData.append("description", description);
             formData.append("image", ImagaeLogo);
 
-            const API = `http://43.205.145.16:4000/blog/updateTodoById/${id}`;
+            const API = `http://43.205.145.146:4000/blog/updateTodoById/${id}`;
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -176,7 +176,7 @@ const EditBlog = () => {
                             <Grid item xs={12} sm={6}>
                                 <label style={styles.label}>
                                     {(image || avatarImage) ? (
-                                        <img src={`http://43.205.145.16:4000/${image}` || avatarImage} style={{ width: '100%', height: 'auto' }} />
+                                        <img src={`http://43.205.145.146:4000/${image}` || avatarImage} style={{ width: '100%', height: 'auto' }} />
                                     ) : (
                                         <label style={styles.label}>
                                             <TextField

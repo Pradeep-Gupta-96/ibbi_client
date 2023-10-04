@@ -53,7 +53,7 @@ const EditHighlights = () => {
 
 
     useEffect(() => {
-        const apiUrl = `http://43.205.145.16:4000/highlights/gethighlightsById/${id}`;
+        const apiUrl = `http://43.205.145.146:4000/highlights/gethighlightsById/${id}`;
 
         async function fetchTodo() {
             try {
@@ -97,7 +97,7 @@ const EditHighlights = () => {
             formData.append("description", description);
             formData.append("image", ImagaeLogo);
 
-            const API = `http://43.205.145.16:4000/highlights/updatehighlightsById/${id}`;
+            const API = `http://43.205.145.146:4000/highlights/updatehighlightsById/${id}`;
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -176,7 +176,7 @@ const EditHighlights = () => {
                             <Grid item xs={12} sm={6}>
                                 <label style={styles.label}>
                                     {(image || avatarImage) ? (
-                                        <img src={`http://43.205.145.16:4000/${image}` || avatarImage} style={{ width: '100%', height: 'auto' }} />
+                                        <img src={`http://43.205.145.146:4000/${image}` || avatarImage} style={{ width: '100%', height: 'auto' }} />
                                     ) : (
                                         <label style={styles.label}>
                                             <TextField

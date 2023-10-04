@@ -66,7 +66,7 @@ const Highlights = () => {
             formData.append("description", discription);
             formData.append("image", ImagaeLogo);
 
-            const API = "http://43.205.145.16:4000/highlights/inserthighlights";
+            const API = "http://43.205.145.146:4000/highlights/inserthighlights";
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -103,7 +103,7 @@ const Highlights = () => {
 
     const handleForDelete = async (id) => {
         try {
-            const API = `http://43.205.145.16:4000/highlights/deletehighlightsById/${id}`;
+            const API = `http://43.205.145.146:4000/highlights/deletehighlightsById/${id}`;
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -136,7 +136,7 @@ const Highlights = () => {
 
     useEffect(() => {
         // Define the API endpoint URL
-        const apiUrl = 'http://43.205.145.16:4000/highlights/getAllhighlights';
+        const apiUrl = 'http://43.205.145.146:4000/highlights/getAllhighlights';
 
         // Create an async function to fetch todos
         async function fetchTodos() {
@@ -157,7 +157,7 @@ const Highlights = () => {
     }, []); // The empty dependency array means this effect runs once after the initial render
 
     const resolveImageUrl = (relativeUrl) => {
-        const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
+        const baseUrl = 'http://43.205.145.146:4000/'; // Replace with your server's base URL
         return `${baseUrl}${relativeUrl}`;
     };
 

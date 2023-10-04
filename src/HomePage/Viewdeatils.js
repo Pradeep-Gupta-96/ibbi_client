@@ -19,7 +19,7 @@ const Viewdeatils = () => {
 
     const [Result, setResults] = React.useState([]);
 
-    const API1 = `http://43.205.145.16:4000/api/whats_new`
+    const API1 = `http://43.205.145.146:4000/api/whats_new`
 
     const fetchData1 = useCallback(async () => {
         try {

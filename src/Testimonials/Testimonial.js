@@ -69,7 +69,7 @@ const Testimonial = () => {
             formData.append("description", discription);
             formData.append("image", ImagaeLogo);
 
-            const API = "http://43.205.145.16:4000/testimonials/inserttestimonials";
+            const API = "http://43.205.145.146:4000/testimonials/inserttestimonials";
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -106,7 +106,7 @@ const Testimonial = () => {
 
     const handleForDelete = async (id) => {
         try {
-            const API = `http://43.205.145.16:4000/testimonials/deletetestimonialsById/${id}`;
+            const API = `http://43.205.145.146:4000/testimonials/deletetestimonialsById/${id}`;
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -139,7 +139,7 @@ const Testimonial = () => {
 
     useEffect(() => {
         // Define the API endpoint URL
-        const apiUrl = 'http://43.205.145.16:4000/testimonials/getAlltestimonials';
+        const apiUrl = 'http://43.205.145.146:4000/testimonials/getAlltestimonials';
 
         // Create an async function to fetch testimonials
         async function fetchtestimonials() {
@@ -160,7 +160,7 @@ const Testimonial = () => {
     }, []); // The empty dependency array means this effect runs once after the initial render
 
     const resolveImageUrl = (relativeUrl) => {
-        const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
+        const baseUrl = 'http://43.205.145.146:4000/'; // Replace with your server's base URL
         return `${baseUrl}${relativeUrl}`;
     };
 

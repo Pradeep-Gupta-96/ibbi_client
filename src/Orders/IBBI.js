@@ -15,7 +15,7 @@ const IBBI = () => {
   const [page, setPage] = React.useState(0);
   const [Result, setResults] = React.useState([]);
 
-  const API1 = `http://43.205.145.16:4000/api/ibbi`
+  const API1 = `http://43.205.145.146:4000/api/ibbi`
 
   const fetchData1 =React.useCallback( async (page) => {
     try {

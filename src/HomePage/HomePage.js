@@ -39,7 +39,7 @@ const HomePage = () => {
   const [testimonials, settestimonials] = React.useState([]);
   const [startIndex, setStartIndex] = React.useState(0);
 
-  const API1 = `http://43.205.145.16:4000/api/public_announcement`
+  const API1 = `http://43.205.145.146:4000/api/public_announcement`
 
   const fetchData1 = React.useCallback(async () => {
     try {
@@ -60,7 +60,7 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // Define the API endpoint URL
-    const apiUrl = 'http://43.205.145.16:4000/blog/getAllTodo';
+    const apiUrl = 'http://43.205.145.146:4000/blog/getAllTodo';
 
     // Create an async function to fetch todos
     async function fetchTodos() {
@@ -97,7 +97,7 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // Define the API endpoint URL
-    const apiUrl = 'http://43.205.145.16:4000/highlights/getAllhighlights';
+    const apiUrl = 'http://43.205.145.146:4000/highlights/getAllhighlights';
 
     // Create an async function to fetch highlights
     async function fetchhighlights() {
@@ -135,7 +135,7 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // Define the API endpoint URL
-    const apiUrl = 'http://43.205.145.16:4000/testimonials/getAlltestimonials';
+    const apiUrl = 'http://43.205.145.146:4000/testimonials/getAlltestimonials';
 
     // Create an async function to fetch testimonials
     async function fetchtestimonials() {
@@ -172,7 +172,7 @@ const HomePage = () => {
   const visibletestimonials = testimonials.slice(startIndex, startIndex + 3);
 
   const resolveImageUrl = (relativeUrl) => {
-    const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
+    const baseUrl = 'http://43.205.145.146:4000/'; // Replace with your server's base URL
     return `${baseUrl}${relativeUrl}`;
   };
 

@@ -15,7 +15,7 @@ const HIGHCOURTs = () => {
   const [page, setPage] = React.useState(0);
   const [Result, setResults] = React.useState([]);
 
-  const API1 = `http://43.205.145.16:4000/api/high_court`
+  const API1 = `http://43.205.145.146:4000/api/high_court`
 
   const fetchData1 = React.useCallback(async (page) => {
     try {

@@ -16,7 +16,7 @@ const Claims = () => {
     const [Result, setResults] = React.useState([]);
     const navigate=useNavigate()
 
-    const API1 = `http://43.205.145.16:4000/api/claims`
+    const API1 = `http://43.205.145.146:4000/api/claims`
 
     const fetchData1 =React.useCallback( async (page) => {
         try {

@@ -11,7 +11,7 @@ const Viewclaims = () => {
     const { id } = useParams()
     const [Result, setResults] = React.useState([]);
 
-    const API1 = `http://43.205.145.16:4000/api/viewclaims/${id}`
+    const API1 = `http://43.205.145.146:4000/api/viewclaims/${id}`
 
     const fetchData1 = React.useCallback(async () => {
         try {
