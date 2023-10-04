@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import logo from './img/logo.png'
- 
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -26,7 +26,7 @@ const Navbar = () => {
       setIsScrolled(false);
     }
   };
-  
+
   return (
 
     <>
@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="topsec">
             <div className="logo"><Link className="nav-Link" to="/"><img src={logo} alt="Logo" /></Link></div>
             <div className="menu">
-              <Link to="/" className='toggle-menu' style={{display:"none"}}>Menu</Link>
+              <Link to="/" className='toggle-menu' style={{ display: "none" }}>Menu</Link>
               <ul>
                 <li className="nav-item parent"><Link className="nav-Link" to="/">Home</Link>
                   <ul>
@@ -53,7 +53,7 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Orders</Link>
-                <ul>
+                  <ul>
                     <li><Link to="/supremecourt">SUPREME COURT</Link></li>
                     <li><Link to="/highcourts">HIGH COURTs</Link></li>
                     <li><Link to="/nclat">NCLAT</Link></li>
@@ -62,7 +62,7 @@ const Navbar = () => {
                     <li><Link to="/ibbi">IBBI</Link></li>
                     <li><Link to="/iparvo">IPA/RVO</Link></li>
                     <li><Link to="/othercourts">OTHER COURTS</Link></li>
-                    </ul>
+                  </ul>
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="#">Announcements</Link>
                   <ul>
@@ -76,10 +76,11 @@ const Navbar = () => {
                   </ul>
                 </li>
                 <li className="nav-item parent"><Link className="nav-Link" to="/blogs">Blog</Link>
-                <ul>
+                  {localStorage.getItem("token") ? <ul>
                     <li><Link to="/highlights">Highlights</Link></li>
                     <li><Link to="/testimonial">Testimonials</Link></li>
-                  </ul>
+                  </ul> : ""}
+
                 </li>
                 <li className="nav-item"><Link className="nav-Link" to="/contact-us">Contacts</Link></li>
                 <li className="nav-item get-free"><Link className="nav-Link" to="#">Get Free Consultation</Link></li>
@@ -88,7 +89,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-     
+
     </>
   )
 }

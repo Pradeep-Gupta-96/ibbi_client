@@ -97,7 +97,7 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // Define the API endpoint URL
-    const apiUrl = 'http://localhost:4000/highlights/getAllhighlights';
+    const apiUrl = 'http://43.205.145.16:4000/highlights/getAllhighlights';
 
     // Create an async function to fetch highlights
     async function fetchhighlights() {
@@ -135,7 +135,7 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // Define the API endpoint URL
-    const apiUrl = 'http://localhost:4000/testimonials/getAlltestimonials';
+    const apiUrl = 'http://43.205.145.16:4000/testimonials/getAlltestimonials';
 
     // Create an async function to fetch testimonials
     async function fetchtestimonials() {
@@ -172,7 +172,7 @@ const HomePage = () => {
   const visibletestimonials = testimonials.slice(startIndex, startIndex + 3);
 
   const resolveImageUrl = (relativeUrl) => {
-    const baseUrl = 'http://localhost:4000/'; // Replace with your server's base URL
+    const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
     return `${baseUrl}${relativeUrl}`;
   };
 
@@ -373,7 +373,7 @@ const HomePage = () => {
                   <div className="content-box">
                     <div className="quate-icon"><FormatQuoteIcon fontSize='large' /></div>
                     <p className='tm-text'><i dangerouslySetInnerHTML={{ __html: item.description }}></i></p>
-                    <div className="authar-name"><img src={resolveImageUrl(item.image)} alt="banner" /><strong><h3>{item.title}</h3></strong><br />Designation</div>
+                    <div className="authar-name"><img src={resolveImageUrl(item.image)} alt="banner" /><strong><h3>{item.title}</h3></strong></div>
                   </div>
                 </Item>
               </Grid>

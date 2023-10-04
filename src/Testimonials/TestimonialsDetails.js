@@ -14,7 +14,7 @@ const TestimonialsDetails = () => {
 
     useEffect(() => {
         // Define the API endpoint URL
-        const apiUrl = `http://localhost:4000/testimonials/gettestimonialsById/${id}`;
+        const apiUrl = `http://43.205.145.16:4000/testimonials/gettestimonialsById/${id}`;
 
         // Create an async function to fetch testimonials
         async function fetchtestimonials() {
@@ -37,7 +37,7 @@ const TestimonialsDetails = () => {
     }, [id]); // The empty dependency array means this effect runs once after the initial render
 
     const resolveImageUrl = (relativeUrl) => {
-        const baseUrl = 'http://localhost:4000/'; // Replace with your server's base URL
+        const baseUrl = 'http://43.205.145.16:4000/'; // Replace with your server's base URL
         return `${baseUrl}${relativeUrl}`;
     };
 

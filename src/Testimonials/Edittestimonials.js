@@ -53,7 +53,7 @@ const Edittestimonials = () => {
 
 
     useEffect(() => {
-        const apiUrl = `http://localhost:4000/testimonials/gettestimonialsById/${id}`;
+        const apiUrl = `http://43.205.145.16:4000/testimonials/gettestimonialsById/${id}`;
 
         async function fetchTodo() {
             try {
@@ -75,7 +75,7 @@ const Edittestimonials = () => {
 
     const handleOnChange = (event) => {
         // Handle changes in form fields (e.g., title, description)
-        const { name, value } = event.target;
+        const { value } = event.target;
         setTitle(value); // Update the title state
     };
 
@@ -97,7 +97,7 @@ const Edittestimonials = () => {
             formData.append("description", description);
             formData.append("image", ImagaeLogo);
 
-            const API = `http://localhost:4000/testimonials/updatetestimonialsById/${id}`;
+            const API = `http://43.205.145.16:4000/testimonials/updatetestimonialsById/${id}`;
 
             // Retrieve the JWT token from localStorage
             const token = localStorage.getItem("token");
@@ -176,7 +176,7 @@ const Edittestimonials = () => {
                             <Grid item xs={12} sm={6}>
                                 <label style={styles.label}>
                                     {(image || avatarImage) ? (
-                                        <img src={`http://localhost:4000/${image}` || avatarImage} style={{ width: '100%', height: 'auto' }} />
+                                        <img src={`http://43.205.145.16:4000/${image}` || avatarImage} style={{ width: '100%', height: 'auto' }} />
                                     ) : (
                                         <label style={styles.label}>
                                             <TextField
